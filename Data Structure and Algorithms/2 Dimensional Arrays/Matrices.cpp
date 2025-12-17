@@ -55,7 +55,6 @@ using namespace std;
     Space Complexity: O(1)
 */
 
-
 void inputRowWise(int twoDimensionalMatrix[][4], int rows, int columns)
 {
     for (int rowIndex = 0; rowIndex < rows; rowIndex++)
@@ -87,7 +86,6 @@ void inputRowWise(int twoDimensionalMatrix[][4], int rows, int columns)
     Time Complexity: O(rows × columns)
     Space Complexity: O(1)
 */
-
 
 void inputColumnWise(int twoDimensionalMatrix[][4], int rows, int columns)
 {
@@ -390,6 +388,52 @@ int smallestElement(int twoDimensionalMatrix[][4], int rows, int columns)
     return smallest;
 }
 
+/*
+    binarySearchMatrix() Function
+
+    Return type - bool
+
+    Arguments
+        1. Vector Matrix (sorted element wise)
+        2. Element to be searched
+
+    Approach
+        Consider the 2D matrix as a single sorted array of size rows × columns
+        Convert 1D index to 2D indices using:
+        Row index → mid / columns
+        Column index → mid % columns
+        Search is executed through linear binary search method
+        Return true → if the target is found
+        Return false → if the target is not found
+
+    Time Complexity: O(log(rows × columns))
+    Space Complexity: O(1)
+*/
+
+bool binarySearchMatrix(int twoDimensionalArray[][4], int rows, int columns, int target)
+{
+    int start = 0, end = rows * columns - 1;
+    int mid = start + (end - start) / 2;
+    while (start <= end)
+    {
+        int element = twoDimensionalArray[mid / columns][mid % columns];
+        if (element == target)
+        {
+            return true;
+        }
+        else if (target > element)
+        {
+            start = mid + 1;
+        }
+        else
+        {
+            end = mid - 1;
+        }
+        mid = start + (end - start) / 2;
+    }
+    return false;
+}
+
 // ---------------------------------MAIN FUNCTION------------------------------------
 
 /*
@@ -510,12 +554,13 @@ int main()
             cout << "\n1. Search an Element" << endl;
             cout << "2. Find Largest Element" << endl;
             cout << "3. Find Smallest Element" << endl;
+            cout << "4. Apply Binary Search" << endl;
             cout << "Enter Choice: ";
             cin >> subInt;
             switch (subInt)
             {
+            int searchElement;
             case 1:
-                int searchElement;
                 cout << "\nEnter an element to search: ";
                 cin >> searchElement;
                 searchInMatrix(matrix, rows, columns, searchElement);
@@ -528,6 +573,18 @@ int main()
             case 3:
                 cout << smallestElement(matrix, rows, columns);
                 cout << "\n\nTime Complexity: O(rows × columns)";
+                break;
+            case 4:
+                cout << "\nEnter an element to search: ";
+                cin >> searchElement;
+                if (binarySearchMatrix(matrix, rows, columns, searchElement)){
+                    cout << "\nFound!" << endl;
+                    cout << "\nTime Complexity: O(log(rows × columns))";
+                }
+                else {
+                    cout << "\nNot Found!" << endl;
+                    cout << "\nTime Complexity: O(rows × columns)";
+                }
                 break;
             default:
                 cout << "Wrong Input!";
