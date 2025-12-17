@@ -394,8 +394,9 @@ int smallestElement(int twoDimensionalMatrix[][4], int rows, int columns)
     Return type - bool
 
     Arguments
-        1. Vector Matrix (sorted element wise)
-        2. Element to be searched
+        1. 2D Array (fixed column size)
+        2. Number of rows
+        3. Number of columns
 
     Approach
         Consider the 2D matrix as a single sorted array of size rows × columns
@@ -430,6 +431,50 @@ bool binarySearchMatrix(int twoDimensionalArray[][4], int rows, int columns, int
             end = mid - 1;
         }
         mid = start + (end - start) / 2;
+    }
+    return false;
+}
+
+/*
+    searchMatrixStairWise() Function
+
+    Return type - bool
+
+    Arguments
+        1. 2D Vector (row-wise and column-wise sorted matrix)
+        2. Target element to be searched
+
+    Approach
+        Start searching from the top-right corner of the matrix
+        Compare the current element with the target
+        If element equals target → return true
+        If element is smaller than target → move down to next row
+        If element is greater than target → move left to previous column
+        Continue until indices go out of bounds
+        Return false → if the target is not found
+
+    Time Complexity: O(rows + columns)
+    Space Complexity: O(1)
+*/
+
+bool searchMatrixStairWise(int twoDimensionalArray[][4], int rows, int columns, int key)
+{
+    int rowIndex = 0, columnIndex = columns - 1;
+    while (rowIndex < rows && columnIndex >= 0)
+    {
+        int element = twoDimensionalArray[rowIndex][columnIndex];
+        if (element == key)
+        {
+            return true;
+        }
+        else if (element < key)
+        {
+            rowIndex++;
+        }
+        else
+        {
+            columnIndex--;
+        }
     }
     return false;
 }
@@ -555,11 +600,12 @@ int main()
             cout << "2. Find Largest Element" << endl;
             cout << "3. Find Smallest Element" << endl;
             cout << "4. Apply Binary Search" << endl;
+            cout << "4. Apply Staircase Search" << endl;
             cout << "Enter Choice: ";
             cin >> subInt;
             switch (subInt)
             {
-            int searchElement;
+                int searchElement;
             case 1:
                 cout << "\nEnter an element to search: ";
                 cin >> searchElement;
@@ -577,13 +623,29 @@ int main()
             case 4:
                 cout << "\nEnter an element to search: ";
                 cin >> searchElement;
-                if (binarySearchMatrix(matrix, rows, columns, searchElement)){
+                if (binarySearchMatrix(matrix, rows, columns, searchElement))
+                {
                     cout << "\nFound!" << endl;
                     cout << "\nTime Complexity: O(log(rows × columns))";
                 }
-                else {
+                else
+                {
                     cout << "\nNot Found!" << endl;
                     cout << "\nTime Complexity: O(rows × columns)";
+                }
+                break;
+            case 5:
+                cout << "\nEnter an element to search: ";
+                cin >> searchElement;
+                if (searchMatrixStairWise(matrix, rows, columns, searchElement))
+                {
+                    cout << "\nFound!" << endl;
+                    cout << "\nTime Complexity: O(rows + columns)";
+                }
+                else
+                {
+                    cout << "\nNot Found!" << endl;
+                    cout << "\nTime Complexity: O(rows + columns)";
                 }
                 break;
             default:
