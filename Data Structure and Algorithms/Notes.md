@@ -56,7 +56,21 @@ Topics Covered
 
 **CREATED CLEAN DOCUMENTATION AND PROGRAMS TOPIC-WISE**
 
-Changes in "Data Stuctures And Algorithms" - **1 - 13 Folders** - Introduction to Programming - Conditional Statements and Loops - Patterns - Bitwise Operators, Number Systems and Probability - Switch Statements and Functions - Arrays in C++ and Problems - Binary Search and Problems - Sorting Techniques - Standard C++ Template Library - Character Arrays & Strings - 2 Dimensional Arrays - Mathematics for DSA - Pointers in C++
+Changes in "Data Stuctures And Algorithms"  
+
+    - **1 - 13 Folders** - Introduction to Programming  
+    - Conditional Statements and Loops  
+    - Patterns  
+    - Bitwise Operators, Number Systems and Probability  
+    - Switch Statements and Functions  
+    - Arrays in C++ and Problems  
+    - Binary Search and Problems  
+    - Sorting Techniques  
+    - Standard C++ Template Library  
+    - Character Arrays & Strings  
+    - 2 Dimensional Arrays  
+    - Mathematics for DSA  
+    - Pointers in C++ 
 
 ### 23rd December 2025
 
@@ -71,11 +85,11 @@ Topics
 
 - **How?**
 
-    Pointers of any specific type can be created using the syntax:
+    Pointers of any specific type can be created using the syntax:  
         __type *pointer__
-    Example:
-        int *p = &n;
-        & -> Address of operator
+    Example:  
+        int *p = &n;  
+        & -> Address of operator  
         (this will be read as, "p is a pointer to integer n" or "address of n is stored in p")
 
 - **Why?**
@@ -86,6 +100,8 @@ Topics
 
 - **Pointers with Arrays**
 
-    When a pointer to an array is created, the pointer stores the address of the first element of array
-    for a pointer p and an array,
+    When a pointer to an array is created, the pointer stores the address of the first element of array  
+    for a pointer p and an array,  
     such that: *p = array[0] = array;
+
+(Refer to "playingWithPointers.cpp" & "pointersWithFunctions.cpp" inside "Pointers in C++")
