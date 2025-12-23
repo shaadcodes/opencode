@@ -58,7 +58,8 @@ Topics Covered
 
 Changes in "Data Stuctures And Algorithms"  
 
-    - **1 - 13 Folders** - Introduction to Programming  
+- **1 - 13 Folders**  
+    - Introduction to Programming  
     - Conditional Statements and Loops  
     - Patterns  
     - Bitwise Operators, Number Systems and Probability  
