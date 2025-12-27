@@ -105,4 +105,71 @@ Topics
     for a pointer p and an array,  
     such that: *p = array[0] = array;
 
-(Refer to "playingWithPointers.cpp" & "pointersWithFunctions.cpp" inside "Pointers in C++")
+(Refer to "playingWithPointers.cpp", "doublePointers&operator.cpp" & "pointersWithFunctions.cpp" inside "Pointers in C++")
+
+### 27th December 2025
+
+**DYNAMIC MEMORY ALLOCATION IN C++**
+
+Topics 
+
+- **What is Stack Memory and Heap Memory?**
+
+    When a program is compiled in C++, it brings with it a Stack Memory and a Heap Memory.  
+
+    **Stack Memory:** It is lesser than Heap Memory and the compile-time declared variables and containers  
+    specify how much Stack Memory will be allocated to the program.  
+    Stack Memory is allocated and deallocated automatically throughout specific scopes of a program.  
+    Allocating some memory to stack (Creating variables and containers like arrays etc) is known as Static Memory Allocation.
+
+    **Heap Memory:** Heap Memory is larger in size as compared to Stack Memory.  
+    Heap Memory is allocated by run-time requested variables and containers.  
+      - Allocating Heap Memory is known as Dynamic Memory Allocation. This is done using 'new' keyword.  
+        for allocating 4 bytes of integer at run-time:  
+
+        _syntax:_ new int;  
+        _syntax(for an array):_ new int[sizeOfArray];  
+
+        This allocates 4 bytes (size of ineteger is 4 bytes) of Heap Memory at run-time.  
+        'new int' returns an address to the allocated Heap Memory for an integer, so to store this address, we use a pointer variable of int type, so this allocation of 4 bytes of memory for an integer looks like:  
+
+        _**int* addressOfAllocatedMemory = new int;**_  
+        _**int* addressOfAllocatedMemory = new int[sizeOfArray];**_  
+
+      - Deallocating Allocated Memory  
+        Allocated Heap Memory is released using 'delete' keyword along with the pointer variable storing the address of the Heap Memory which is to be released.  
+        
+        _syntax:_ delete addressOfAllocatedMemory;
+        _syntax(for an array):_ delete[] addressOfAllocatedArray;
+
+- **Why Dynamic Memory allocation?**
+
+    Dyanmic Memory allocation is the optimized and crash-resistant way of allocation memory at run-time.  
+    for example, we want to allocate memory defined by user:  
+
+    <code>
+    ```cpp
+      cout << "Enter the size of array: ";
+      cin >> sizeOfArray;
+      int array[sizeOfArray];
+    ```
+    </code>
+
+    This is considered as a BAD Practice. So dynamic memory allocation is used to allocate memory at run-time.  
+
+    <code>
+    ```cpp
+        cout << "Enter the size of array: ";
+        cin >> sizeOfArray;
+        int *pointerStoringAddress = new int[sizeOfArray];
+    ```
+    </code>
+
+    This is the proper way of allocating memory dynamically in C++.
+
+- **Allocation in 2-Dimensional Arrays**
+
+    for allocating a 2-D Array dynamically using pointer of pointers (double pointers).  
+    This is illustrated by creation and use of a Jagged Array.  
+
+(Refer to "Dynamic Memory Allocation in C++")

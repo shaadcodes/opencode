@@ -28,6 +28,23 @@ void swapWithPointers(int* a, int* b) {
     *b = temp;
 }
 
+/*
+    increment() Function
+        Increments the value of an integer by 1 using a pointer.
+
+    Return Type - void
+
+    Parameters:
+        int* num - Pointer to the integer to be incremented.
+
+    Logic:
+        1. Dereference the pointer 'num' and increment the value it points to by 1.
+*/
+
+void increment (int* num) {
+        (*num)++;
+}
+
 //--------------------------------------------MAIN FUNCTION-------------------------------------
 
 int main(){
@@ -41,11 +58,6 @@ int main(){
     swapWithPointers(&x, &y);
 
     cout << "After swap: x = " << x << ", y = " << y << endl;
-
-    // Function to increment an integer using a pointer
-    auto increment = [](int* num) {
-        (*num)++;
-    };
 
     int z = 5;
     cout << "Before increment: z = " << z << endl;
