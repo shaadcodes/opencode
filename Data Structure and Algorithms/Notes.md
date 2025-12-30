@@ -173,3 +173,69 @@ Topics
     This is illustrated by creation and use of a Jagged Array.  
 
 (Refer to "Dynamic Memory Allocation in C++")
+
+### 30th December 2025
+
+**MACROS, GLOBAL VARIABLES, INLINE FUNCTIONS & DEFAULT ARGUMENTS**
+(refer to "15. Macros, Global Variables, Inline Functions & Default Arguments")
+
+Topics 
+
+- **Macros**
+
+    Macros are a piece of code which are replaced in the program by the value of macro.  
+    To create a macro we use ' #define ' before macro name and assign a value to it.  
+
+    _syntax:_ #define macroName macroValue  
+    _example:_ #define pi 3.14  
+
+    These macros need to be defined after including the header files at the top of program. (no need of semicolon)  
+    Macros do not consume any extra memory space unlike creating variables.  
+
+    (refer to "macros.cpp")
+
+- **Global Variables**
+
+    Global Variables are simple variable declarations outside of any function (main function included).  
+    Global variables are declared similarly as simple variables, they are stored in **permanent storage area.**  
+    Since, Global variables are variables, they consume memory.  
+    Global Variables are not preferred much because their values can be changed accidentally throughout the program which can lead to loss of original value of the variable.  
+    DEclaring a global variable means it's scope is extended throughout the program.  
+    _Declaration:_  
+
+  <code>
+  ```cpp
+    #include <iostream>
+    using namespace std;
+    int globalVariable = 67; // Global Variable Declaration
+
+    int main(){
+      // statements
+      return 0;
+    }
+  ```
+  </code>
+
+  (refer to "globalVariables.cpp")
+
+- **Inline Functions**
+
+    Inline functions are defined using the _inline_ keyword.  
+    Inline functions are used to **function call overhead** (which means the performance hit caused by calling the function, which means the time taken to call the function by referring to it's definition and creating copies of arguments)  
+    By adding the _inline_ keyword to a function, the function call is replaced by the function defintion completely, reducing the function call overhead.  
+    The ideal case for making a function inline is when thew function body is smaller (1-line function body)
+
+    (refer to "inlineFunctions.cpp")
+
+- **Default Arguments**
+
+    Default arguments are used when it's not definite that the user may want or not want to provide any value for the function to run.  
+    We can say the optional arguments defined in the function are known as default arguments.  
+    To define a default argument, assign it a default value while defining it in a function definition.  
+
+    _syntax:_ return type (datatype value, datatype value = defaultValue);
+    _example:_ void func(int x, int y = 0);  
+
+    In this example, if a function call is made like this, _func (4, 5)_, the function will use the provided value for the argument 'y', but if a function call is made like this, _func (9)_, the function will automatically assume the value of argument 'y' to be 0 as assigned by default.  
+
+    (refer to "defaultArguments.cpp")
