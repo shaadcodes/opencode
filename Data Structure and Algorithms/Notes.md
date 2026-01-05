@@ -87,11 +87,11 @@ Topics
 - **How?**
 
     Pointers of any specific type can be created using the syntax:  
-        __type *pointer__
+    <code>type *pointer</code>  
     Example:  
-        int *p = &n;  
-        & -> Address of operator  
-        (this will be read as, "p is a pointer to integer n" or "address of n is stored in p")
+    <code>int *p = &n;</code>  
+    & -> Address of operator  
+    (this will be read as, "p is a pointer to integer n" or "address of n is stored in p")
 
 - **Why?**
 
@@ -103,7 +103,8 @@ Topics
 
     When a pointer to an array is created, the pointer stores the address of the first element of array  
     for a pointer p and an array,  
-    such that: *p = array[0] = array;
+    such that:  
+    <code> *p = array[0] = array; </code>
 
 (Refer to "playingWithPointers.cpp", "doublePointers&operator.cpp" & "pointersWithFunctions.cpp" inside "Pointers in C++")
 
@@ -124,47 +125,50 @@ Topics
 
     **Heap Memory:** Heap Memory is larger in size as compared to Stack Memory.  
     Heap Memory is allocated by run-time requested variables and containers.  
-      - Allocating Heap Memory is known as Dynamic Memory Allocation. This is done using 'new' keyword.  
-        for allocating 4 bytes of integer at run-time:  
 
-        _syntax:_ new int;  
-        _syntax(for an array):_ new int[sizeOfArray];  
+    - Allocating Heap Memory is known as Dynamic Memory Allocation. This is done using 'new' keyword.  
+      for allocating 4 bytes of integer at run-time:  
 
-        This allocates 4 bytes (size of ineteger is 4 bytes) of Heap Memory at run-time.  
-        'new int' returns an address to the allocated Heap Memory for an integer, so to store this address, we use a pointer variable of int type, so this allocation of 4 bytes of memory for an integer looks like:  
+      ```cpp
+      new int;  
+      new int[sizeOfArray];  // for an array
+      ``` 
 
-        _**int* addressOfAllocatedMemory = new int;**_  
-        _**int* addressOfAllocatedMemory = new int[sizeOfArray];**_  
+      This allocates 4 bytes (size of ineteger is 4 bytes) of Heap Memory at run-time.  
+      'new int' returns an address to the allocated Heap Memory for an integer, so to store this address, we use a pointer variable of int type, so this allocation of 4 bytes of memory for an integer looks like:  
 
-      - Deallocating Allocated Memory  
-        Allocated Heap Memory is released using 'delete' keyword along with the pointer variable storing the address of the Heap Memory which is to be released.  
-        
-        _syntax:_ delete addressOfAllocatedMemory;
-        _syntax(for an array):_ delete[] addressOfAllocatedArray;
+      ```cpp
+        int *addressOfAllocatedMemory = new int;
+        int *addressOfAllocatedMemory = new int[sizeOfArray];  // for an array
+      ```
+
+    - Deallocating Allocated Memory  
+      Allocated Heap Memory is released using 'delete' keyword along with the pointer variable storing the address of the Heap Memory which is to be released.  
+      
+      Syntax:  
+      ```cpp
+      delete addressOfAllocatedMemory;
+      delete[] addressOfAllocatedArray;  // for an array
+      ```
 
 - **Why Dynamic Memory allocation?**
 
     Dyanmic Memory allocation is the optimized and crash-resistant way of allocation memory at run-time.  
     for example, we want to allocate memory defined by user:  
 
-    <code>
     ```cpp
       cout << "Enter the size of array: ";
       cin >> sizeOfArray;
       int array[sizeOfArray];
     ```
-    </code>
 
     This is considered as a BAD Practice. So dynamic memory allocation is used to allocate memory at run-time.  
 
-    <code>
     ```cpp
-        cout << "Enter the size of array: ";
-        cin >> sizeOfArray;
-        int *pointerStoringAddress = new int[sizeOfArray];
+        cout << "Enter the size of array: ";  
+        cin >> sizeOfArray;  
+        int *pointerStoringAddress = new int[sizeOfArray];  
     ```
-    </code>
-
     This is the proper way of allocating memory dynamically in C++.
 
 - **Allocation in 2-Dimensional Arrays**
@@ -186,8 +190,11 @@ Topics
     Macros are a piece of code which are replaced in the program by the value of macro.  
     To create a macro we use ' #define ' before macro name and assign a value to it.  
 
-    _syntax:_ #define macroName macroValue  
-    _example:_ #define pi 3.14  
+    Syntax:  
+    <code> #define macroName macroValue  </code>
+
+    Example:  
+    <code> #define pi 3.14 </code>
 
     These macros need to be defined after including the header files at the top of program. (no need of semicolon)  
     Macros do not consume any extra memory space unlike creating variables.  
@@ -200,10 +207,9 @@ Topics
     Global variables are declared similarly as simple variables, they are stored in **permanent storage area.**  
     Since, Global variables are variables, they consume memory.  
     Global Variables are not preferred much because their values can be changed accidentally throughout the program which can lead to loss of original value of the variable.  
-    DEclaring a global variable means it's scope is extended throughout the program.  
+    Declaring a global variable means it's scope is extended throughout the program.  
     _Declaration:_  
 
-  <code>
   ```cpp
     #include <iostream>
     using namespace std;
@@ -214,7 +220,6 @@ Topics
       return 0;
     }
   ```
-  </code>
 
   (refer to "globalVariables.cpp")
 
@@ -233,8 +238,11 @@ Topics
     We can say the optional arguments defined in the function are known as default arguments.  
     To define a default argument, assign it a default value while defining it in a function definition.  
 
-    _syntax:_ return type (datatype value, datatype value = defaultValue);
-    _example:_ void func(int x, int y = 0);  
+    Syntax:  
+    <code>return type (datatype value, datatype value = defaultValue);</code>
+
+    Example:  
+    <code>void func(int x, int y = 0);</code>
 
     In this example, if a function call is made like this, _func (4, 5)_, the function will use the provided value for the argument 'y', but if a function call is made like this, _func (9)_, the function will automatically assume the value of argument 'y' to be 0 as assigned by default.  
 

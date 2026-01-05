@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+        :root{
+            --primary: #4467ff;
+            --primary-hover: #0023c1;
+            --second: #b3ceff; 
+            --second-hover: #0051ff;
+        }               
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav{
+            background-color: var(--primary, #333);
+            padding: 1vh 80vh;
+        }
+        .nav:hover{
+            padding: 1vh 80vh;
+            background-color: var(--primary-hover, #444);
+            transition: background-color 0.3s ease-in-out;
+        }
+        .navcon{
+            display: flex;
+            padding: 10px 10px;
+        }
+        .items{
+            padding: 5px;
+            margin: 10px 10px;
+            color: aliceblue;
+            font-family: raleway;
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            transition: all 0.3s ease-in-out;
+        }
+        .items:hover{
+            font-size: larger;
+            font-weight: bolder;
+            background-color: var(--second, #555);
+            border-radius: 30px;
+            padding: 15px;
+            color: var(--second-hover);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul class="navcon">
+            <li class="items">Home</li>
+            <li class="items">About</li>
+            <li class="items">Contact</li>
+            <li class="items">Explore</li>
+        </ul>
+    </div>
+</body>
+</html>

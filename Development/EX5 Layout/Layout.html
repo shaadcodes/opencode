@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Design</title>
+    <style>
+      :root {
+        --primarycol: rgb(3, 0, 173);
+        --primarycolhov: rgb(2, 0, 122);
+        --secondarycol: rgb(73, 60, 255);
+        --primarytext: rgb(178, 191, 255);
+      }
+      body {
+        background-color: var(--secondarycol, #5a5a5a);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        position: sticky;
+        top: 0px;
+        margin: 20px 3vw;
+        background-color: var(--primarycol, #343434);
+        color: var(--primarycol, #ffffff);
+        padding: 18px;
+        border-radius: 5vw;
+        width: 90vw;
+        height: 3vh;
+      }
+      nav:hover {
+        text-align: center;
+        width: 70vw;
+        height: 3vh;
+        margin: 30px 10vw;
+        padding: 36px;
+        background-color: var(--primarycolhov, #444);
+        transition: all 0.3s ease-in-out;
+      }
+      ul {
+        text-align: center;
+      }
+      .links {
+        text-align: center;
+        display: inline;
+        padding: 20px;
+        cursor: pointer;
+        color: var(--primarytext, #ffffff);
+        padding: 5px;
+        margin: 10px 10px;
+        color: aliceblue;
+        font-family: raleway;
+        font-weight: 700;
+        cursor: pointer;
+        list-style: none;
+        transition: all 0.3s ease-in-out;
+      }
+      .links:hover {
+        font-size: larger;
+        font-weight: bolder;
+        background-color: var(--secondarycol, #555);
+        border-radius: 30px;
+        padding: 15px;
+        color: var(--secondarycol);
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--primarytext, #ffffff);
+      }
+      .containers {
+        background-color: var(--secondarycol, #b2b2b2);
+        height: 80vh;
+      }
+      .container {
+        display: inline-block;
+        height: 35em;
+        width: 35em;
+        margin: 3%;
+        margin-left: 10%;
+        background-color: var(--primarycol, #343434);
+      }
+      .container:hover{
+        scale: 1.1;
+        background-color: var(--primarycolhov, #343434);
+        transition: all 0.1s ease-in-out;
+      }
+      .shape {
+        margin: 2em 6em;
+        height: 15vh;
+        width: 85vw;
+        border: 5px solid var(--primarycol, #343434);
+        border-radius: 50px;
+      }
+      .shape p {
+        text-align: center;
+        padding: 5vh 0;
+        font-size: 30px;
+        color: var(--primarytext);
+      }
+      footer {
+        background-color: var(--primarycol, #343434);
+        color: var(--primarytext, #ffffff);
+        height: 10vh;
+        align-content: center;
+        padding-left: 48vw;
+      }
+      .logo {
+        position: fixed;
+        background-color: var(--primarycol, #b2b2b2);
+        height: 100px;
+        width: 100px;
+        bottom: 10px;
+        right: 10px;
+        border-radius: 100px;
+        box-shadow: 10px 10px 20px 1px var(--primarycol, #343434);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="links"><a href="/">Home</a></li>
+        <li class="links"><a href="/">Services</a></li>
+        <li class="links"><a href="/">Contact</a></li>
+        <li class="links"><a href="/">About</a></li>
+        <li class="links"><a href="/">Reach Out!</a></li>
+      </ul>
+    </nav>
+    <div class="containers">
+      <div class="container"></div>
+      <div class="container"></div>
+    </div>
+    <div class="shape">
+      <p>Welcome to this Sigma Web Development Express!</p>
+    </div>
+    <div class="logo">
+      <img src="" alt="Logo" />
+    </div>
+    <footer>Random Footer Text</footer>
+  </body>
+</html>
