@@ -247,3 +247,57 @@ Topics
     In this example, if a function call is made like this, _func (4, 5)_, the function will use the provided value for the argument 'y', but if a function call is made like this, _func (9)_, the function will automatically assume the value of argument 'y' to be 0 as assigned by default.  
 
     (refer to "defaultArguments.cpp")
+
+### 7 - 8th January 2026
+
+**Recursion**
+(refer to "16. Recursion & Problems")
+
+Topics 
+
+- **Recursion Basics**
+
+  When a function calls itself, the process is known as **recusrsion** and thus the function is called a recursive function.  
+
+  OR  
+
+  When a function call is made inside its own body, this process is called recursion.  
+
+  OR  
+
+  _When a small case of a problem is solved and to solve the whole problem, the same approach is used for all small parts of the problem to solve the whole problem, this approach is called recursion._  
+
+  There are two mandatory components of recursion for an error free solution,  
+
+    _Base Case:_ A base case is defined to stop the recursion process, if no base case is defined, the recursion goes on till the program is crashed. (example - if (n == 1) return 0;)  
+
+    _Recursive Relation:_ A proper recursive relation is defined to solve the problem. (example - f(a) = f(b) + f(c);)  
+
+  Syntax:  
+  ```cpp
+    return_type functionName (arguments)
+    {
+      functionName (arguments);
+    }  
+  ```
+
+  Example:  
+  ```cpp
+    int print (int n)
+    {
+      if (n == 0) return 0; // Base Case
+      print (n-1); // Recursive Relation
+      cout << n; // Processing
+    }
+  ```  
+  **Head Recursion Vs. Tail Recursion**
+
+  When the recursive call is made before the processing of the function, the recursion is said to be **head recursion**  
+
+  When the recursive call is the last operation in the function, the recursion is said to be **tail recursion**  
+
+  **Problems Solved:**
+
+    -   Fibonacci Series (refer to "fibonacci.cpp" inside "16. Recursion & Problems")
+    -   Different ways to climb stairs (refer to "nStairs.cpp" inside "16. Recursion & Problems")
+    -   Print the digits' names in a given number (refer to "sayDigits.cpp" inside "16. Recursion & Problems")

@@ -5,9 +5,10 @@ I am currently pursuing BCA (4rth Semester) and using this repository to:
 - Practice DSA concepts
 - Track my daily progress
 - Build strong problem-solving skills
+- Create Web Development projects
 
 ## Language and Tools
-- **Language:** C++
+- **Language:** C++, HTML, CSS
 - **IDE:** VS Code
 - **Platform:** macOS
 - **Version Control:** Git & GitHub
