@@ -19,6 +19,9 @@ using namespace std;
         For nStairs > 0, it recursively calculates the number of ways to reach the current stair by summing the ways to reach the two preceding stairs:
             - countDistinctWays(nStairs) = countDistinctWays(nStairs - 1) + countDistinctWays(nStairs - 2)
         The result is taken modulo 1,000,000,007 to handle large numbers.
+
+    Time Complexity: O(2^n) due to the exponential growth of recursive calls.
+    Space Complexity: O(n) due to the recursive call stack.
 */
 
 int countDistinctWays(int nStairs) {

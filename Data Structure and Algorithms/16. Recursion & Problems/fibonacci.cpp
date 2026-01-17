@@ -17,6 +17,9 @@ using namespace std;
             - fib(1) = 1
         For n > 1, it recursively calls itself to compute the sum of the two preceding Fibonacci numbers:
             - fib(n) = fib(n-1) + fib(n-2)
+    
+    Time Complexity: O(2^n) due to the exponential growth of recursive calls.
+    Space Complexity: O(n) due to the recursive call stack.
 */
 
 int fibRecursive(int n)
@@ -44,6 +47,9 @@ int fibRecursive(int n)
         The function initializes the first two Fibonacci numbers and iteratively computes the subsequent numbers up to n:
             - It uses a loop starting from 2 up to n, updating the first and second Fibonacci numbers in each iteration.
             - The final computed Fibonacci number is returned.
+
+    Time Complexity: O(n) as it iterates from 2 to n.
+    Space Complexity: O(1) as it uses a constant amount of space.
 */
 
 int fibIterative(int n) {
@@ -63,7 +69,6 @@ int fibIterative(int n) {
 
     return final;
 }
-
 
 // -------------------------------------------------MAIN FUNCTION-------------------------------------------------
 

@@ -17,6 +17,9 @@ using namespace std;
             - It defines a mapping of digits (0-9) to their corresponding words.
             - It recursively calls itself with the number divided by 10 to process the next digit.
             - After returning from the recursive call, it prints the word corresponding to the last digit (number % 10).
+
+    Time Complexity: O(d) where d is the number of digits in the number.
+    Space Complexity: O(d) due to recursive call stack.
 */
 
 void sayDigits(int number) {
