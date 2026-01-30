@@ -310,15 +310,15 @@ Topics
     -   Print the digits' names in a given number (refer to "sayDigits.cpp" inside "16. Recursion & Problems")
     -   Calculate sum of elements in an Array (refer to "sumOfArray.cpp" inside "16. Recursion & Problems")
 
-    **Merge Sort:**  
+  **Merge Sort:**  
 
-        Merge sort is a sorting technique which divides the given array into two parts, and recursively sorts the encountered subarrays and merges all the sorted parts into one single, sorted array.
+      Merge sort is a sorting technique which divides the given array into two parts, and recursively sorts the encountered subarrays and merges all the sorted parts into one single, sorted array.
 
-        (refer to "mergeSort.cpp" inside "16. Recursion & Problems")
+      (refer to "mergeSort.cpp" inside "16. Recursion & Problems")
 
-    **Quick Sort:**  
+  **Quick Sort:**  
 
-        Quick sort first creates a partition in the array using a pivot element. A pivot is created by placing the first element of the array to it's correct position, which is determined by finding the number of elements smaller than the first element. Then, a pivot is created by placing the first element to it's correct position and then for sorting, a condition is satisfied i.e. All the elements towards the left of the pivot must be smaller than the pivot and the elements towards the right of the pivot must be greater than the pivot, this process is called 'Partition' as a whole.
-        After creating partition, a recursive call is made in the left portion of the pivot and then the right portion and eventually the array gets sorted.
+      Quick sort first creates a partition in the array using a pivot element. A pivot is created by placing the first element of the array to it's correct position, which is determined by finding the number of elements smaller than the first element. Then, a pivot is created by placing the first element to it's correct position and then for sorting, a condition is satisfied i.e. All the elements towards the left of the pivot must be smaller than the pivot and the elements towards the right of the pivot must be greater than the pivot, this process is called 'Partition' as a whole.
+      After creating partition, a recursive call is made in the left portion of the pivot and then the right portion and eventually the array gets sorted.
 
-        (refer to "quickSort.cpp" inside "16. Recursion & Problems")
+      (refer to "quickSort.cpp" inside "16. Recursion & Problems")
