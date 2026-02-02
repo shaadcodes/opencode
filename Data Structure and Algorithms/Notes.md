@@ -308,6 +308,8 @@ Topics
     -   Applied recursive Linear Search (refer to "recursiveLinearSearch.cpp" inside "16. Recursion & Problems")
     -   Program to reverse an input string using recursion (refer to "reverseString.cpp" inside "16. Recursion & Problems")
     -   Print the digits' names in a given number (refer to "sayDigits.cpp" inside "16. Recursion & Problems")
+    -   Subsequences of a string problem (refer to "subsequences.cpp" inside "16. Recursion & Problems")
+    -   Subsets of an array problem (refer to "subsets.cpp" inside "16. Recursion & Problems")
     -   Calculate sum of elements in an Array (refer to "sumOfArray.cpp" inside "16. Recursion & Problems")
 
   **Merge Sort:**  
