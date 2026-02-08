@@ -301,6 +301,8 @@ Topics
     -   Calculate power using recursion (refer to "calculatePower.cpp" inside "16. Recursion & Problems")
     -   Check if a string is Palindrome (refer to "checkPalindrome.cpp" inside "16. Recursion & Problems")
     -   Fibonacci Series (refer to "fibonacci.cpp" inside "16. Recursion & Problems")
+    -   Letter Combinations of a Phone Number (refer to "LC17_phoneKeypad.cpp" inside "16. Recursion & Problems")
+    -   Permutations of a string (refer to "LC46_permutations.cpp" inside "16. Recursion & Problems")
     -   Different ways to climb stairs (refer to "nStairs.cpp" inside "16. Recursion & Problems")
     -   Applied recursive Binary Search (refer to "recursiveBinarySearch.cpp" inside "16. Recursion & Problems")
     -   Applied recursive Bubble Sort (refer to "recursiveBubbleSort.cpp" inside "16. Recursion & Problems")
