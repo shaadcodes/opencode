@@ -300,7 +300,9 @@ Topics
 
     -   Calculate power using recursion (refer to "calculatePower.cpp" inside "16. Recursion & Problems")
     -   Check if a string is Palindrome (refer to "checkPalindrome.cpp" inside "16. Recursion & Problems")
+    -   Factorial Calculation (refer to "factorial.cpp" inside "16. Recursion & Problems")
     -   Fibonacci Series (refer to "fibonacci.cpp" inside "16. Recursion & Problems")
+    -   Rat in a maze problem (refer to "GFG_ratInAMaze.cpp" inside "16. Recursion & Problems")
     -   Letter Combinations of a Phone Number (refer to "LC17_phoneKeypad.cpp" inside "16. Recursion & Problems")
     -   Permutations of a string (refer to "LC46_permutations.cpp" inside "16. Recursion & Problems")
     -   Different ways to climb stairs (refer to "nStairs.cpp" inside "16. Recursion & Problems")
@@ -316,13 +318,70 @@ Topics
 
   **Merge Sort:**  
 
-      Merge sort is a sorting technique which divides the given array into two parts, and recursively sorts the encountered subarrays and merges all the sorted parts into one single, sorted array.
+    Merge sort is a sorting technique which divides the given array into two parts, and recursively sorts the encountered subarrays and merges all the sorted parts into one single, sorted array.
 
-      (refer to "mergeSort.cpp" inside "16. Recursion & Problems")
+    (refer to "mergeSort.cpp" inside "16. Recursion & Problems")
 
   **Quick Sort:**  
 
-      Quick sort first creates a partition in the array using a pivot element. A pivot is created by placing the first element of the array to it's correct position, which is determined by finding the number of elements smaller than the first element. Then, a pivot is created by placing the first element to it's correct position and then for sorting, a condition is satisfied i.e. All the elements towards the left of the pivot must be smaller than the pivot and the elements towards the right of the pivot must be greater than the pivot, this process is called 'Partition' as a whole.
-      After creating partition, a recursive call is made in the left portion of the pivot and then the right portion and eventually the array gets sorted.
+    Quick sort first creates a partition in the array using a pivot element. A pivot is created by placing the first element of the array to it's correct position, which is determined by finding the number of elements smaller than the first element. Then, a pivot is created by placing the first element to it's correct position and then for sorting, a condition is satisfied i.e. All the elements towards the left of the pivot must be smaller than the pivot and the elements towards the right of the pivot must be greater than the pivot, this process is called 'Partition' as a whole.
+    After creating partition, a recursive call is made in the left portion of the pivot and then the right portion and eventually the array gets sorted.
 
-      (refer to "quickSort.cpp" inside "16. Recursion & Problems")
+    (refer to "quickSort.cpp" inside "16. Recursion & Problems")
+
+### 11th February 2026
+
+**Time and Space complexity of recursive functions**
+
+  - **Time Complexity**  
+  
+    To compute time complexity of recursive functions, we create specific _recurrence relations_ (like mathematical equations) to solve and extract the time complexitites.
+
+    Let's say, we have written a function 'f' with input 'n', f(n) and we have to calculate the time complexity of this function.  
+    First we refer to the recurrence relation like _f(n) = n * f(n-1)_, say a factorial function (refer to "factorial.cpp" inside "16. Recursion & Problems"), then we create a time complexity equation out of this relation and function working as _T(n) = k + T(n-1)_, where, T(n) is the time required as of input 'n' and 'k' is a constant time required by function for constant computations.  
+
+    Then, we find the same equation for _T(n-1)_, as _T(n-1) = k + T(n-2)_ and continue till we find the equation for the base cases as _T(1) = k + T(0)_ & _T(0) = k_  
+
+    After we collect all of the equations, we add all the equations as:  
+
+    T(n) = k + T(n-1)  
+    T(n-1) = k + T(n-2)  
+    T(n-2) = k + T(n-3)  
+    |  
+    |  
+    |  
+    |  
+    T(1) = k + T(0)  
+    T(0) = k  
+    \+  
+    _________________
+    T(n) = k * n + k  
+
+    Since, 'k' is a constant time, we neglect 'k' and the overall time complexity becomes **_T(n) = O(n)_**  
+    Hence, we can use this approach to find time comlexities of specific functions.
+
+  - **Space Complexity**
+
+    To calculate space complexity of a recursive function, we build and study the function call stack of the recursive function and add up all the space required for each call and any extra space which is not released (deallocated).  
+
+    To do this let's have a function, say factorial (refer to "factorial.cpp" inside "16. Recursion & Problems"), now we first collect the constant extra space for each call.  
+
+    S(n) = k + S(n-1) where, 'k' is the constant extra space required in all conditions so we collect all the call stack equations as:  
+
+    S(n) = k + S(n-1)  
+    S(n-1) = k + S(n-2)  
+    S(n-3) = k + S(n-4)  
+      |  
+      |  
+      |  
+      |  
+    S(1) = k + S(0)  
+    S(0) = k  
+    \+
+    ___________________
+
+    S(n) = k * n + k
+
+    Since we neglect the constant terms, we get **_S(n) = O(n)_**  
+
+(refer to "16. Recursion & Problems" & https://www.naukri.com/code360/guided-paths/competitive-programming/content/126222/offering/1476042?leftPanelTabValue=PROBLEM&customSource=studio_nav)
