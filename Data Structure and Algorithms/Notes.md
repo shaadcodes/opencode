@@ -385,3 +385,320 @@ Topics
     Since we neglect the constant terms, we get **_S(n) = O(n)_**  
 
 (refer to "16. Recursion & Problems" & https://www.naukri.com/code360/guided-paths/competitive-programming/content/126222/offering/1476042?leftPanelTabValue=PROBLEM&customSource=studio_nav)
+
+### 12th February 2026
+
+**Object Oriented Programming (OOPs)**
+
+  Object Oriented Programming is used to solve real-world problems and create secure, extensible and easy to maintain programs.
+  OOPs has many benefits, which will be discussed with progress.
+  
+  - **_Classes_**
+
+    Classes are user defined datatypes which can be used to create variables of type _class_, called the objects of the classes. Classes contain data members (class variables) and member functions (class functions). Creation of a class does not consume any memory but only record a blueprint for defining an object, and only objects consume the memory only when declared or created. 
+
+    Example class creation in C++:  
+
+    ```cpp
+      class ClassName 
+      {
+        int dataMember;
+
+        void memberFunction(void)
+        {
+          return;
+        }
+      };
+    ```
+  
+  - **_Objects_**
+
+    When a class is created, it's instances can be defined known as _objects_. Objects are real-world entities consisting of some **_attributes_** (data members defined in the class) and **_behaviour_** (memeber functions of the class). These instances can use the data members and member functions of the classes binded in a single entity improving the readabilitiy and security of code.  
+
+    Example creation of objects in C++:  
+
+    ```cpp
+      class ClassName 
+      {
+        int dataMember;
+
+        void memberFunction(void)
+        {
+          return;
+        }
+      };
+
+      int main()
+      {
+        ClassName object1, object2;
+
+        return 0;
+      }
+    ```
+
+    **To access data defined inside a class using an object we use ' . ' (dot) operator**  
+    Example: <code> object1.dataMember = 5; </code>
+
+  - **_Access Modifiers_**
+
+    A key feature of OOPs is that the programs created using OOPs are _secure_. Security and resource sharing in OOPs can be controlled using _Access Modifiers_ which determine who can access the data and members.  
+
+    There are 3 types of access Modifiers:  
+
+      - **_Public_**: Data can be accessed by anyone inside or outside the class.
+      - **_Private_**: Data can be accessed only by the class member functions inside the class and to access data outside, the public member functions must be used (i.e data cannot be accessed directly using objects).
+      - **_Protected_**: To be discussed later...
+
+    ```cpp
+      class Car
+      {
+        private:
+          int issues;
+
+        public:
+          char model;
+          int price;
+      };
+    ```
+
+    Now, In the above snippet, the _model_ and _price_ of the Car can be accessed by anyone iside or outside the class because _public:_ access modifier is used but the number of issues in. the model can only be accessed by the user of the class.  
+
+    **By default, all the data inside a class is private**
+
+  - **_Getters & Setters_**
+
+    Getters and Setters are specialized functions (member functions) used to access private data members outside the class.  
+    Getters are used to get the data members' values while Setters are used to set or assign values to data members.
+
+    ```cpp
+      class Car
+      {
+        private:
+          int issues;
+
+        public:
+          char model;
+          int price;
+
+          int getIssues()
+          {
+            return issues;
+          }
+
+          void setIssues(int issueCount)
+          {
+            issues = issueCount;
+          }
+      };
+    ```
+
+    Now, We can access the private _'issue'_ member using getters and setters.
+
+  - **_Memory Consumption of classes and objects_**
+
+    - Empty Class
+      
+      An empty class consumes 1 byte of memory just to create an identification of it's existence.  
+      (Actually classes don't taek up any space, classes are only blueprints for object (instance) definition. Memory is consumed onkly when an object of a specific class is created)
+
+    - Classes with contents
+    
+      Memory consumption by the objects of a class is determined by the number and size of variables and data structures defined inside the class.
+
+      Example:
+
+    ```cpp
+    class Car
+    {
+      private:
+        int issues;
+
+      public:
+        char model;
+        int price;
+
+        int getIssues()
+        {
+          return issues;
+        }
+
+        void setIssues(int issueCount)
+        {
+          issues = issueCount;
+        }
+    };
+
+    ```
+
+    Since this class consists of 3 variables _issues(4 bytes integer), model(1 byte character)_ and _price(4 bytes integer)_ So, when an object of this class is created as <code>Car xuv;</code>, this _xuv_ object, when created, takes up 4 + 1 + 4 = 9 bytes of memory but because of **_memory padding_**, the final size would be 12 bytes instead of 9 bytes.
+
+    Memory padding is applied by compiler to efficiently manage storage and retrieval (accession) of variable inside memory by placing variables in equal memory blocks like 4 + 4 + 4 instead of 4 + 1 + 4, this technique optimizes management of resources in memory and improves efficiency but for a trade-off of more memory consumption. To solve this problem, we use **_Greedy Alignment_** technique where we place the variables in a class in the ascending order of their size so the compiler packs them more tighly in memory blocks.
+
+  - **_Static and Dynamic Allocation_**
+
+    Just like we create variables statically as well as dynamically, we can do same for objects.
+
+    - Static
+
+      <code> Car xuv, thar, sedan; </code>
+
+    - Dynamic
+
+      <code> Car *xuv = new Car; </code>  
+      <code> Car *xuv = new Car[5]; </code> (for array)  
+
+    We should access the dynamically allocated objects (using their pointers) either by de-referencing (*objectPointer) the pointers or using the value at (arrow **->**) operator.
+
+    Example:  
+
+    <code> cout << (*xuv).price << endl; </code>  
+    <code> cout << xuv -> price << endl; </code>
+
+  - **_Constructors_**
+
+    Constructors are special functions of a class which are automatically invoked upon object creation. Even if there is no constructor function defined inside a class, by defalut a consturctor function is defined and invoked automatically.  
+
+    We can explicitly define our own constructors with specific tasks or to initialize objects upon creation.  
+    A constructor has the same name as it's class and no return type.  
+    Example:   
+
+    ```cpp
+      class Car
+      {
+        Car ()
+        {
+          cout << "Car object creaeted..." << endl;
+        }
+      }
+    ```
+
+    Now whenever an object of class _Car_ is created, "Car object is created..." automatically prints on the screen due to automatic constructor call.
+
+    - Parameterized constructors
+
+      Constructors defined by the user which have specific parameters are called parameterized constructors.  
+
+      Example:  <code> ConstructorName (parameterType parameterName) </code>  
+
+      These are generally used to initialize objects while declaration. We can directly assign values to objects while declaring them with the use of parameterized constructors.
+
+      Example:  
+
+    ```cpp
+    class Car
+    {
+      private:
+        int issues;
+
+      public:
+        char model;
+        int price;
+
+        Car (char model, int price)
+        {
+          this.model = model; // this using dot operator
+          this -> price = price; // this using value at operator
+        }
+    };
+
+    int main()
+    {
+      Car xuv('C', 800000); // Static
+      Car *sedan = new Car('A', 1500000); // Dynamic
+    }
+    ```
+
+    **"_this_" keyword is used to differentiate between the variables. _this_ keyword stored the address of the current class object (can be used with dot (.) or value at (->) operator)**
+
+    - Copy constructors
+
+      Copy constructors are used to replicate values from a pre defined object to a new object. Copy constructors have an object passed as a parameter.  
+
+    ```cpp
+    class Car
+    {
+      private:
+        int issues;
+
+      public:
+        char model;
+        int price;
+
+        Car (Car& oldCar)
+        {
+          this.model = oldCar.model;
+          this.price = oldCar.price;
+        }
+    };
+
+    int main()
+    {
+      Car xuv('C', 800000);
+      Car newXuv(xuv); // Method 1
+      Car otherXuv = newXuv; // Method 2
+    }
+    ```
+
+    **Note: There is no need to explicitly create a copy constructor, passing an object as a parameter automatically invokes default copy constrcutor of an object.**
+
+  - **_Shallow VS Deep Copies_**
+
+    Whenever a copy constructor is invoked, the reference of object is passed as a parameter, not the object itself. So, any changes made in one objec reflects in the other object using the previous object as an argument. This is known as a **_Shallow copy_**. 
+
+    Now to avoid this problem and create copies which are independant of changes in each object, we create copies of the data explicitly inside the copy constructor. This copy is known as a **_Deep copy_**.
+
+    **Default copy constructor always creates a shallow copy.**
+
+  - **_Copy Assignment Operator_**
+
+    When an object is created and values are initilized then we can easily copy the values of first object into another using _assignment operator (=)_.  
+
+    Example: <code> object2 = object1; </code>  
+
+    This above piece of code will copy the values from _object1_ to _object2_.
+
+  - **_Destructors_**
+
+    Destructors function similar to constructors in a way that they're called automatically just before moving out of current scope.  
+    They look similar to constructors _i.e._ they have the same name as the class and no parameters except that they begin with a tilda sign (~).
+
+    ```cpp
+      class Car
+      {
+        Car () // Constructor
+        {
+          cout << "Constructor called / Car object creaeted..." << endl;
+        }
+
+        ~Car () // Destructor
+          cout << "Destructor called / Car object deleted..." << endl;
+        }
+      }
+    ```
+
+    **Constructors and Destructors are automatically defined and called if not explicitly done.**
+
+  - **_static Keyword & static Functions_**
+
+    _static_ keyword is used to declare variables which can be called outside a class without creating any object of the class. _i.e._ static keyword makes the data _static_ (same) for all the objects of the class.  
+
+    Like when we create variables, we can assign different values to different variables but when static variables are defined, only one value is common among the objects _i.e._ all the objects created have the same value.
+
+    when a fucntion is made static, _i.e._ defined with a _static_ keyword, It can only access static variables.  
+
+    ```cpp 
+      static int staticVariableName;
+      static int staticFunctionName ()
+      {
+        staticVariableName = value;
+      }
+    ```
+
+    Static variables are initialized outside the main() function and used with Scope resolution operator (::).  
+
+    Example: <code> int className::staticVariableName = value; </code>, This is initialization.  
+
+    Now to modify or access the value, the syntax is similar except that no datatype is mentioned.  
+
+    Exampl: <code> className::staticVariableName = value; </code>
+
