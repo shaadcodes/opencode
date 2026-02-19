@@ -667,7 +667,7 @@ Topics
       {
         Car () // Constructor
         {
-          cout << "Constructor called / Car object creaeted..." << endl;
+          cout << "Constructor called / Car object created..." << endl;
         }
 
         ~Car () // Destructor
@@ -702,3 +702,89 @@ Topics
 
     Exampl: <code> className::staticVariableName = value; </code>
 
+    (refer to "OOPs.cpp" inside "17. Object Oriented Programming in C++")
+
+### 19 February 2026
+
+**Pillars Of OOPs**
+
+  - **Encapsulation**
+
+    Encapsulation is the process of binding data members & member functions together into a single unit.  
+    Example: Binding Data & Functions into classes and accessing them using objects.  
+    (refer to "Encapsulation.cpp" inside "17. Object Oriented Programming in C++")  
+
+  - **Inheritance**
+
+    Interitance is the practice of reusing the code which was previously written to avoid writing very general code again and again.  
+    When a _child class_ or _subclass_ inherits the properties (attributes) from it's _parent class_ (_superclass_).  
+    Inheritance is of the following types:  
+
+      - **Single-Level Inheritance**: When a single child class inherits from a single parent.
+      - **Multi-Level Inheritance**: When a child class inherits from it's parent class, which itself inherits from it's parent and so on...
+      - **Multiple Inheritance**: When a child class has multiple parent classes.
+      - **Hierarchial Inheritance**: When a parent class has two or more child classes going on to multiple levels.
+      - **Hybrid Inheritance**: Mixture of any two or more types of inheritance.  
+
+    A class is inherited using the following syntax:  
+    <code>class childClassName : accessModifier parentClassName</code>
+
+    (refer to "Inheritance.cpp" inside "17. Object Oriented Programming in C++")  
+
+  - **Polymorphism**
+
+    Polymorphism is the usage of same piece of code differently in different circumstances.  
+    Following are the types of polymorphism:  
+      - Compile-time Polymorphism
+
+        Polymorphism is carried out at compile time (while writing the code)  
+        - **Method Overloading**: Functions (methods) have the same name, but differ in number of arguments passed or both number of arguments passed and return type. When the function is called, the method which matches the function signature is executed.  
+        Example:  
+
+        ```cpp
+          // Integer addition function
+          int add(int number1, int number2)
+          {
+            return number1 + number2;
+          }
+
+          // String concatenation function
+          string add(string str1, string str2)
+          {
+            return str1 + str2;
+          }
+
+          int main()
+          {
+            cout << add(6, 18) << endl; // This invokes the integer addition function
+            cout << add("Good", "Evening") << endl; // This invokes the string concatenation function
+
+            return 0;
+          }
+        ```
+
+        - **Operator Overloading**: We can overload operators in C++ using operator overloading. This way the operators can be used to do something different than what they actually do.  
+        Syntax:  <code>returnType operator operatorToOverload (arguments) {definition}</code>  
+        Example:  
+        ```cpp
+          int operator + (int & number)
+          {
+            return number * number;
+          }
+        ```
+
+        Now, whenever we use + operator with any number, it returns the square of that number rather than adding the numbers.  
+      - Run-time Polymorphism
+
+        - **Method Overriding**: When the parent class and child class both have functions with same names but different definitions, the object which calls accesses the function determines which function will be called. If the object is of parent type, the function defined in the parent class will be called. If the object is of child type, the function defined in the child class will be called.  This is called _method overriding_, an example of Dynamic (Run-time) Polymorphism.  
+
+    (refer to "Polymorphism.cpp" inside "17. Object Oriented Programming in C++")  
+
+  - **Abstraction**
+
+    Abstraction is the process of hiding the implemention from the unnecesaary entities. This ensures the people to focus on the functionality rather than implementation.  
+
+    Abstraction can be achieved by:  
+      - Classes
+      - Header Files
+      - Access Modifiers
