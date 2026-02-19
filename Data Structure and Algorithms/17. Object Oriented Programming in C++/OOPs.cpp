@@ -60,22 +60,20 @@ public:
         cout << "Roll Number: " << rollNumber << endl;
     }
 
+    // Setter
     void setInternalGrade(char grade)
     {
         internalGrade = grade;
     }
 
+    // Getter
     char getInternalGrade()
     {
         return internalGrade;
     }
 
-    static void incrementStudentCount(void)
-    {
-        studentCount++;
-    }
-
-    static void displayStudentCount(void)
+    // Static function
+    static void displayStudentCount()
     {
         cout << "Total Students: " << studentCount << endl;
     }
@@ -94,13 +92,14 @@ int Student::studentCount = 0;
 
 int main()
 {
-    Student Alice, Bob;
+    Student Alice, Bob; // Object Creation
 
+    // Accessing public data members using dot operator.
     Alice.name = "Alice";
     Alice.age = 20;
     Alice.rollNumber = 101;
     Alice.setInternalGrade('A');
-    Student::studentCount++; // Increment student count for Alice
+    Student::studentCount++; // Increment static student count
 
     cout << "Student Details:" << endl;
     Alice.display();
@@ -112,7 +111,7 @@ int main()
     Bob.age = 22;
     Bob.rollNumber = 102;
     Bob.setInternalGrade('B');
-    Student::studentCount++; // Increment student count for Bob
+    Student::studentCount++; // Increment student count
 
     cout << "\nStudent Details:" << endl;
     Bob.display();
@@ -120,7 +119,7 @@ int main()
     cout << "Size of Student object: " << sizeof(Bob) << " bytes" << endl;
     Bob.displayStudentCount();
 
-    Empty emptyObject;
+    Empty emptyObject; // Empty class object
     cout << endl << "Size of Empty class: " << sizeof(Empty) << " bytes" << endl;
     cout << endl << "Size of Empty class object: " << sizeof(emptyObject) << " bytes" << endl;
 
