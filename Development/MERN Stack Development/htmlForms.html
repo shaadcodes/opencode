@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <h3>Event Registration</h3>
+      <form>
+        <label for="name">Name:</label>
+        <br />
+        <br />
+        <input type="text" id="name" placeholder="John Doe" />
+        <br />
+        <br />
+        <label for="eamil">E-Mail:</label>
+        <br />
+        <br />
+        <input type="email" id="email" placeholder="johndoe1234@example.com" />
+        <br />
+        <br />
+        <label for="phone">Phone Number:</label>
+        <br />
+        <br />
+        <input type="tel" id="phone" placeholder="123 456 7890" />
+        <br />
+        <br />
+        <label for="occupation">Occupation</label>
+        <br />
+        <br />
+        <select name="Occupation" id="occupation">
+          <option value="student">Student</option>
+          <option value="professional">Professional</option>
+          <option value="other">Other</option>
+        </select>
+        <br />
+        <br />
+        <label for="topicofineterest">Topic of Interest:</label>
+        <br />
+        <br />
+        <input type="checkbox" id="topicofineterest" />HTML
+        <input type="checkbox" id="topicofineterest" />CSS
+        <input type="checkbox" id="topicofineterest" />JavaScript
+        <br />
+        <br />
+        <label for="comments">Comments:</label>
+        <br />
+        <br />
+        <textarea
+          name="comments"
+          id="comments"
+          placeholder="Enter comments"
+          rows="8"
+          cols="24"
+        ></textarea>
+        <br />
+        <br />
+        <button>Register</button>
+      </form>
+    </fieldset>
+    <fieldset>
+      <form>
+        <h3>Job Application</h3>
+        <label for="nameJA">Name:</label>
+        <br />
+        <br />
+        <input type="text" id="nameJA" placeholder="John Doe" />
+        <br />
+        <br />
+        <label for="emailJA">E-Mail:</label>
+        <br />
+        <br />
+        <input type="email" id="emailJA" placeholder="johndoe1234@example.com" />
+        <br />
+        <br />
+        <label for="phoneJA">Phone Number:</label>
+        <br />
+        <br />
+        <input type="tel" id="phoneJA" placeholder="123 456 7890" />
+        <br />
+        <br />
+        <label for="resume">Resume:</label>
+        <br />
+        <br />
+        <input type="file" id="resume" />
+        <br />
+        <br />
+        <label for="xp">Experience (in years):</label>
+        <br />
+        <br />
+        <input type="number" min="0" max="50" id="xp" placeholder="XP" />
+        <br />
+        <br />
+        <fieldset>
+          <legend>Skills:</legend>
+          <label for="cb1">HTML</label>
+          <input type="checkbox" id="cb1" />
+          <label for="cb2">CSS</label>
+          <input type="checkbox" id="cb2" />
+          <label for="cb3">JavaScript</label>
+          <input type="checkbox" id="cb3" />
+        </fieldset>
+        <br />
+        <br />
+        <label for="education">Highest Education:</label>
+        <br />
+        <br />
+        <select id="education">
+          <option value="highschool">High School</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="graduate">Graduate</option>
+        </select>
+        <br />
+        <br />
+        <label for="radio1">Full-Time:</label>
+        <input type="radio" name="availability" id="radio1" />
+        <label for="radio1">Part-Time:</label>
+        <input type="radio" name="availability" id="radio2" />
+        <br />
+        <br />
+        <label for="commentsJA">Additional Comments:</label>
+        <br />
+        <br />
+        <textarea id="commentsJA" rows="8" cols="24" placeholder="Enter Comments..."></textarea>
+        <br />
+        <br />
+        <input type="submit" id="submitJA" />
+      </form>
+    </fieldset>
+    <fieldset>
+      <form>
+        <h3>Complex Form</h3>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <br />
+          <label for="nameCF">Name:</label>
+          <input type="text" id="nameCF" placeholder="John Doe" />
+          <br />
+          <br />
+          <label for="emailCF">E-Mail:</label>
+          <input type="email" id="emailCF" placeholder="johndoe1234@example.com" />
+          <br />
+          <br />
+          <label for="phoneCF">Phone Number:</label>
+          <input type="tel" id="phoneCF" placeholder="123 456 7890" />
+          <br />
+          <br />
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" />
+          <br />
+          <br />
+          <label for="r1">Male</label>
+          <input type="radio" name="gender" id="r1" />
+          <label for="r2">Female</label>
+          <input type="radio" name="gender" id="r2" />
+          <br />
+          <br />
+          <select name="country" id="country">
+            <option value="US">USA</option>
+            <option value="IND">India</option>
+            <option value="UK">United Kingdom</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Address</legend>
+          <br />
+          <label for="street">Street:</label>
+          <input type="text" id="street" />
+          <br />
+          <br />
+          <label for="city">City:</label>
+          <input type="text" id="city" />
+          <br />
+          <br />
+          <label for="state">State:</label>
+          <input type="text" id="state" />
+          <br />
+          <br />
+          <label for="zip">Zip Code:</label>
+          <input type="text" id="zip" placeholder="0000" />
+        </fieldset>
+        <fieldset>
+          <br />
+          <legend>Other Information</legend>
+          <label for="commentsCF">Comments:</label>
+          <br />
+          <textarea
+            name="commentsCF"
+            id="commentsCF"
+            rows="8"
+            cols="24"
+            placeholder="Enter Comments..."
+          ></textarea>
+          <br />
+          <br />
+          <label for="agreement">I Agree to the terms & conditions:</label>
+          <input type="checkbox" id="agreement" />
+        </fieldset>
+        <br />
+        <input type="submit" />
+      </form>
+    </fieldset>
+  </body>
+</html>
