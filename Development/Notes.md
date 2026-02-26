@@ -151,4 +151,58 @@ Here, < body >< /body > is a HTML element.
 - **Inline Elements**: Elements which take up only enough space to fit it's contents without wasting any other space.  
 Example: <code> < span > </code>  
 - **Block Elements**: Elements which take up space of a single line whether it's contents fit in completely or partially.  
-Example: <code> < div > </code>  
+Example: <code> < div > </code>
+
+### 20 February 2026
+
+**HTML Tables**
+
+Tables are data storage formats used to cleanly store and retrieve information in the form of _rows_ and _columns_.  
+Tables consist of a number of **_cells_** (intersection created by a row and a column) which store information which is to be dislayed in tabular form.
+
+- To create a table in HTML, <code> < table > </code> tag is used.  
+- To set the table header, <code> < thead > </code> tag is used
+- To create a heading in a table, <code> < th > </code> tag is used
+- To create a footer in a table, <code> < tfoot > </code> tag is used
+- To create a row in a table, <code> < tr > </code> tag is used
+- To input data in a table row, <code> < td > </code> tag is used
+- To adjust spanning (expansion) of rows and columns, <code> < td rowspan = "integer" colspan = "integer" > </code> attributes are used (these can also be used with < th > tag).
+
+(refer to "htmlTables.html" inside "MERN Stack Development").  
+
+**HTML Forms**
+
+Forms are structures used to collect input from the user in different types of ways like text input, button input, selection input etc. (these are all included in forms).  
+
+- To create a form in HTML, <code> < form > </code> tag is used
+- To provide an input method to the user, <code> < input > </code> tag is used along with <code> < input type = "text/radio/checkbox/date etc" > </code> attribute. a "placeholder" attribute is also used with <code> < input placeholder = "Dummy text"> </code> to display the user what to input in text fields.
+- To describe the input to the user, <code> < label > </code> tag is used along with <code> < label for = "idOfInput" > </code> attribute where _idOfInput_ is the _id = "value"_ attribute assigned to the input.
+- <code> < select > </code> tag is used to provide a drop down selection menu. Options in the <code> < select > </code> tag are created using <code> < option > </code> tag.
+- To create buttons in the form, <code> < button > </code> tag is used.
+- To provide a text field for a user to type, <code> < textarea > </code> tag is used. To control/set the area which <code> < textarea > </code> tag covers, attributes <code> < textarea rowspan = "value" colspan = "value" > </code> are used.  
+
+- **_Input Types (used as attributes for <code> < input > </code> tag)_**
+    - button
+    - checkbox
+    - file
+    - hidden
+    - image
+    - month
+    - number
+    - password
+    - radio
+    - range
+    - reset
+    - search
+    - submit
+    - tel
+    - text
+    - time
+    - url
+    - week
+    - email
+    - datetime-local
+    - date
+    - color
+
+(Default value of <code> < input > </code> tag's _type_ attribute is "text").
