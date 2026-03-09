@@ -874,3 +874,15 @@ Linked Lists are of the following types:
   ```
 
   (refer to "circularLL.cpp" inside "18. Linked Lists & Problems")
+
+### 3rd March 2026
+
+**Problems Solved (Linked Lists)**
+
+  - LeetCode 206 - Reverse Singly Linked List ([view](https://leetcode.com/problems/reverse-linked-list/description/))  
+  (refer to "C360_reverseLL.cpp")
+
+  - LeetCode 876 - Find middle of the linked list ([view](https://leetcode.com/problems/middle-of-the-linked-list/description/))  
+  (refer to "C360_middleOfLL.cpp")  
+
+  - Code 360 - Reverse Linked List in groups of 'k' elements ([view](https://www.naukri.com/code360/problems/reverse-list-in-k-groups_983644?leftPanelTab=0%3Fsource%3Dyoutube&campaign=Lovebabbar_codestudio_26thjan&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbar_codestudio_26thjan))
