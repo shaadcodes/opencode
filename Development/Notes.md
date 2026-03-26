@@ -131,7 +131,7 @@ Series - Complete Web Dev using MERN stack (https://www.youtube.com/watch?v=Vi9b
 
     ISPs can be of different types, for example if we request for a website (if we try to access a website), the _router_ (a device used to create requests and interact with other systems) first sends the request to the local ISP, which then checks for the requested address in the _Routing Table_ (A table storing indices with keys to a number of IP addresses). If the request matches to one of the records, it redirects the client to the website. But if the request does not match any record in the routing table, the local ISP redirects the request to the NSP (National ISP) and this way, the request bounces multiple times from one ISP to another and reaches the destination.  
 
-**HTML Tags & Categorization**  
+## **HTML, Tags & Categorization**  
 
 A _tag_ is a markup entity used to add _structure, meaning_ or _formatting_ to a webpage.  
 Types of Tags:  
@@ -206,3 +206,153 @@ Forms are structures used to collect input from the user in different types of w
     - color
 
 (Default value of <code> < input > </code> tag's _type_ attribute is "text").
+
+## **CSS: Cascading Style Sheets**
+
+CSS is used to apply formatting and improve the look and feel of a web page.  
+A CSS file has the extension '.css'.  
+A CSS file needs to be linked to the corresponding HTML file under the head tag in order to control the HTML formatting throught written CSS.  
+
+### Methods of using CSS:  
+- Inline CSS: CSS is written within a tag using the _style_ attribute.  
+```html
+    <div style = "color: blue; font-size: 16px;"></div>
+```
+
+- Internal CSS: CSS is implemented inside the HTML file under the <code> < head > </code> tag using <code> < style > </code> tag.
+```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- CSS IS DECLARED HERE -->
+        <style>
+            div
+            {
+                height: 100px;
+                width: 100px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+    </html>
+```
+
+- External CSS: A separate, clean CSS file is created which is then linked to the HTML file to apply CSS properties to HTML.
+```html
+    <!-- HTML FILE HAVING THE CSS FILE LINKED -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- LINKING OF CSS FILE IS DONE HERE (NAME OF THE CSS FILE IS 'style.css') -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div></div>
+    </body>
+    </html>
+```
+
+```css
+    /* CSS FILE CONTAINING PROPERTIES FOR HTML DOCUMENT AND IT'S ELEMENTS */
+    div
+    {
+        height: 100px;
+        width: 100px;
+        color: white;
+    }
+```
+
+### CSS Selectors
+
+CSS Selectors are used to select the HTML elements to format them.  
+HTML elements and tags can also have _classes_ and _ids_ to select them using CSS selectors. 
+- Elements are selected directly using the element tag like <code> div{} </code>
+- Elements are selected with their specified class using <code> . </code>  
+- Elements are selected with their specified id using <code> # </code>
+```html
+    <!-- HTML FILE HAVING THE CSS FILE LINKED -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- LINKING OF CSS FILE IS DONE HERE (NAME OF THE CSS FILE IS 'style.css') -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class = "box1" id = "first"></div>
+    </body>
+    </html>
+```
+
+```css
+    /* Direct selector */
+    div
+    {
+        height: 100px;
+        width: 100px;
+        color: white;
+    }
+
+    /* Class selector */
+    .box1
+    {
+        height: 100px;
+        width: 100px;
+        color: white;
+    }
+
+    /* Id selector */
+    #first
+    {
+        height: 100px;
+        width: 100px;
+        color: white;
+    }
+```
+
+### CSS measurement units
+
+- Absolute units  
+Absolute units are rigid, fixed and non-flexible units. Examples:  
+<code> px </code>
+<code> mm </code>
+<code> in </code>
+<code> pt </code>
+<code> pc </code>
+
+- Relative units
+Relative units change and adapt according to screen size and view area. Examples:  
+<code> vh </code>
+<code> vw </code>
+<code> em </code>
+<code> rem </code>
+<code> % </code>
+
+### CSS Typography and Fonts
+
+Typography is refrerred to as visual display of typed text in a web page. Using CSS we can style text in different ways to create impact and attractiveness.  
+
+Fonts can be cutomized in CSS using multiple ways and attributes.  
+Different types of font attributes allow us to change size, weightage etc of fonts.  
+
+### CSS Box Model
+
+Box Model is a concept which determines that all the content on the web page is controlled using a _box_ structure, basically a rectangle.  
+
+Box Model includes _content, padding, border and margin_. These constituents make up an element in a web page.  
+
+- Margin is the space allocated outside an element
+- Padding is the space given towards inside the element
+- Border lies between padding and margin
+- Content is the actual content of the element
