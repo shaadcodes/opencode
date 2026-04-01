@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inspiration&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cardcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    45deg,
+    rgb(142, 197, 252) 0%,
+    rgb(141, 211, 255) 25%,
+    rgb(161, 216, 255) 50%,
+    rgb(193, 210, 255) 75%,
+    rgb(224, 195, 255) 100%
+  );
+}
+
+.card {
+  height: 500px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.image {
+  height: 300px;
+  border-radius: 20px;
+  margin: 12px;
+  overflow: hidden;
+  background-color: #2781ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.text h2,
+.text p {
+  font-family: "Funnel Display", sans-serif;
+  margin: 3px 18px;
+}
+
+.image img {
+  width: 80%;
+  object-fit: cover;
+}
