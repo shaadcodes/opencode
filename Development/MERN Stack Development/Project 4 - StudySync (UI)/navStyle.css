@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inspiration&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --primarycolor: #6366f1;
+  --accentcolor: #3f83f8;
+  --textcolor: #333333;
+  --linkcolor: #2563eb;
+  --backgroundcolor: #ffffff;
+  --lightgray: #f0f0f0;
+  --gray: #808080;
+  --darkgray: #555;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.header {
+  width: 80vw;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+header button {
+  border: none;
+  background-color: var(--backgroundcolor);
+}
+
+header button img {
+  height: 1rem;
+}
+
+@media (min-width: 530px) {
+  header .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 530px) {
+  header .contact {
+    display: none;
+  }
+}
+
+@media (max-width: 995px) {
+  header nav {
+    display: none;
+  }
+}
+
+
+header .logo a {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo a img {
+  height: 2rem;
+}
+
+header .logo a,
+header .logo h1 {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+nav a {
+  font-weight: 500;
+  color: var(--gray);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  color: var(--darkgray);
+}
+
+.contactbutton {
+  text-decoration: none;
+  color: var(--backgroundcolor);
+  background-color: var(--primarycolor);
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  border-radius: 0.3rem;
+  text-wrap: nowrap;
+  transition: all 0.3s;
+}
+
+.contactbutton:hover {
+  background-color: var(--linkcolor);
+}
