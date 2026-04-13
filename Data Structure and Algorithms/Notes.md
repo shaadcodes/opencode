@@ -882,7 +882,9 @@ Linked Lists are of the following types:
   - LeetCode 206 - Reverse Singly Linked List ([view](https://leetcode.com/problems/reverse-linked-list/description/))  
   (refer to "C360_reverseLL.cpp")
 
-  - LeetCode 876 - Find middle of the linked list ([view](https://leetcode.com/problems/middle-of-the-linked-list/description/))  
+  - LeetCode 876 - Find middle of the Linked List ([view](https://leetcode.com/problems/middle-of-the-linked-list/description/))  
   (refer to "C360_middleOfLL.cpp")  
 
   - Code 360 - Reverse Linked List in groups of 'k' elements ([view](https://www.naukri.com/code360/problems/reverse-list-in-k-groups_983644?leftPanelTab=0%3Fsource%3Dyoutube&campaign=Lovebabbar_codestudio_26thjan&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbar_codestudio_26thjan))
+
+  - Code 360 - Detect and remove loop in a Linked List ([view](https://www.naukri.com/code360/problems/interview-shuriken-42-detect-and-remove-loop_241049?leftPanelTab=0%3Fsource%3Dyoutube&campaign=YouTube_codestudio_lovebabbar28thjan&utm_source=youtube&utm_medium=affiliate&utm_campaign=YouTube_codestudio_lovebabbar28thjan))
