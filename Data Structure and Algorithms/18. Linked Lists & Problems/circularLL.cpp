@@ -17,12 +17,12 @@ class CLL
     public:
 
         int data;
-        CLL *nextLL;
+        CLL *nextLL = NULL;
 
         CLL(int data)
         {
             this -> data = data;
-            this -> nextLL = NULL;
+            this -> nextLL = this;
         }
 };
 
