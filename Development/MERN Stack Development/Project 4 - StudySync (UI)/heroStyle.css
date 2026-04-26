@@ -1,0 +1,114 @@
+#hero {
+  width: 80vw;
+  margin: auto;
+}
+
+.hero1 {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem,35rem));
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+#hero .hero1 .hero1text {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+#intro {
+  color: var(--primarycolor);
+}
+
+#herohead {
+  font-size: 3rem;
+  font-weight: 750;
+}
+
+.hero1text p {
+  font-weight: 500;
+}
+
+#heropara {
+  color: var(--darkgray);
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero1text .button {
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.4rem;
+}
+
+#start {
+  color: var(--backgroundcolor);
+  background-color: var(--primarycolor);
+  transition: all 0.3s;
+}
+
+#start:hover {
+  background-color: var(--linkcolor);
+}
+
+#tour {
+  color: var(--backgroundcolor);
+  background-color: var(--darkgray);
+  transition: all 0.3s;
+}
+
+#tour:hover {
+  background-color: var(--textcolor);
+}
+
+.hero1image {
+    padding: 2rem;
+  height: 35rem;
+}
+
+.hero1image img {
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.hero2 {
+  display: flex;
+  margin: 3rem;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero2head {
+  font-weight: 700;
+}
+
+#companies {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 3rem;
+  background-color: var(--lightgray);
+  border-radius: 0.4rem;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.company img {
+  height: 1rem;
+}
+
+.company p {
+  color: var(--gray);
+}
