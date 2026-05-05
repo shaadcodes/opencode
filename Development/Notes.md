@@ -352,7 +352,46 @@ Box Model is a concept which determines that all the content on the web page is 
 
 Box Model includes _content, padding, border and margin_. These constituents make up an element in a web page.  
 
-- Margin is the space allocated outside an element
-- Padding is the space given towards inside the element
-- Border lies between padding and margin
-- Content is the actual content of the element
+- **Margin** is the space allocated outside an element
+- **Padding** is the space given towards inside the element
+- **Border** lies between padding and margin
+- **Content** is the actual content of the element
+
+### CSS Display Properties  
+
+Display properties control how an element may be displayed on the web page. It instructs the browser to display specific elements in different ways.  
+
+Types of display properties:  
+
+- **Block**: This is the display property which commands the web browser to display the element (to which it is assigned) in a separate line. i.e. many elements of Block property cannnot share the same line, rather they would appear in separate lines of their own.  
+
+- **Inline**: Inline display property commands the web browser to display the element only in the space it requires (i.e. It's dimensions). This means that many elements of the Inline display property can appear in the same line if there is enough space.  
+
+- **Flex**: This property converts the object into a FlexBox. A flexbox is a CSS element which is flexible, easily adjustable according to space, easy to align and place accordingly. A FlexBox has many different properties:  
+
+    - Flex Direction
+    - Flex Wrap
+    - Align Items
+    - Justify Items
+    - Align Content
+    - Justify Content
+    - Flex Grow
+    - Flex Shrink
+
+    FlexBox is a vast topic and unlocks many creative capabilities of a designer/developer and contribute a massive amount to responsiveness of a web page.  
+
+- **Grid**: Grid is a property which converts the viewspace into a grid of rows and columns which allows items to be placed into spearate cells giving a systematic and clean look to messy items. Similar to FlexBox, grids also have different properties:  
+
+    - Grid Flow
+    - Align Content
+    - Justify Content
+    - Justify Items
+    - Align Items
+
+    Grids can be customized using grid templates or grid areas to create more of responsive and clean web pages.  
+
+### CSS Position Properties  
+
+Position properties in CSS determine how an object or element may be positioned on the web page. Different position properties have different attributes for the object to which they're assigned. Different types of position properties include:  
+
+- **Static**: This is the default property for all elements. It does not allow the element to have any space from top, left, right or bottom. No custom value for z-index.  
