@@ -1,0 +1,59 @@
+#testimonials {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+#testimonials h1 {
+  font-weight: 700;
+}
+
+.testimonialcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.tcard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  width: 22rem;
+  padding: 1.5rem;
+  gap: 0.8rem;
+  border: solid var(--lightgray) 1px;
+  border-radius: 0.4rem;
+  flex-direction: column;
+  box-shadow: 0rem 1rem 1rem var(--lightgray);
+  transition: all 0.3s;
+}
+
+.tcard:hover {
+    border: solid var(--primarycolor) 1px;
+    scale: 1.05;
+}
+
+.tcard p {
+  font-size: 0.8rem;
+}
+
+.tcard .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.tcard .name {
+    color: var(--primarycolor);
+    font-weight: 600;
+}
+
+.tcard img {
+  height: 4rem;
+  width: 4rem;
+}
