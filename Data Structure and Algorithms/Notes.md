@@ -880,15 +880,35 @@ Linked Lists are of the following types:
 **Problems Solved (Linked Lists)**
 
   - LeetCode 206 - Reverse Singly Linked List ([view](https://leetcode.com/problems/reverse-linked-list/description/))  
-  (refer to "C360_reverseLL.cpp")
+    - (refer to "C360_reverseLL.cpp")
+    - Recursive (refer to "reverseListRecursive.cpp")
 
   - LeetCode 876 - Find middle of the Linked List ([view](https://leetcode.com/problems/middle-of-the-linked-list/description/))  
-  (refer to "C360_middleOfLL.cpp")  
+    - (refer to "C360_middleOfLL.cpp")  
+    - Optimized (refer to "C360_middleOfLL.cpp")  
 
   - Code 360 - Reverse Linked List in groups of 'k' elements ([view](https://www.naukri.com/code360/problems/reverse-list-in-k-groups_983644?leftPanelTab=0%3Fsource%3Dyoutube&campaign=Lovebabbar_codestudio_26thjan&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbar_codestudio_26thjan))
+  (refer to "C360_reverseListInKGroups.cpp")
 
   - Code 360 - Detect and remove loop in a Linked List ([view](https://www.naukri.com/code360/problems/interview-shuriken-42-detect-and-remove-loop_241049?leftPanelTab=0%3Fsource%3Dyoutube&campaign=YouTube_codestudio_lovebabbar28thjan&utm_source=youtube&utm_medium=affiliate&utm_campaign=YouTube_codestudio_lovebabbar28thjan))
+    - Using Map (refer to "C360_detectAndRemoveLoopMap.cpp")
+    - Using Floyd's Loop Detection (refer to "detectAndRemoveLoopFloyd.cpp")
 
   - Code 360 - Remove duplicates from a sorted Doubly Linked List ([view](https://www.naukri.com/code360/problems/unique-sorted-list_2420283?leftPanelTab=0%3Fsource%3Dyoutube&campaign=YouTube_Lovebabbar29thJan&utm_source=youtube&utm_medium=affiliate&utm_campaign=YouTube_Lovebabbar29thJan))
+  (refer to "C360_removeDuplicatedFromSortedDLL.cpp")
 
   - Code 360 - Remove duplicates from an unsorted Linked List ([view](https://www.naukri.com/code360/problems/remove-duplicates-from-unsorted-linked-list_1069331?source=youtube&campaign=YouTube_Lovebabbar29thJan&utm_source=youtube&utm_medium=affiliate&utm_campaign=YouTube_Lovebabbar29thJan))
+    - Using Map (refer to "removeDuplicatesFromUnSortedLL_Map.cpp")
+    - NlogN Complexity (refer to "removeDuplicatesFromUnSortedLL_NLogN.cpp")
+    - N Square Complexity (refer to "removeDuplicatesFromUnSortedLL_nSquare.cpp")
+
+  - Code 360 - Merge two sorted Linked Lists ([view](https://www.naukri.com/code360/problems/merge-two-sorted-linked-lists_800332?leftPanelTab=0%3Fsource%3Dyoutube&campaign=YouTube_Lovebabbar31stJan2021&utm_source=youtube&utm_medium=affiliate&utm_campaign=YouTube_Lovebabbar31stJan2021))
+  (refer to "C360_mergeTwoSortedLinkedLists.cpp")
+
+  - Code 360 - Sort 0s, 1s and 2s in a Linked List ([view](https://www.naukri.com/code360/problems/sort-linked-list-of-0s-1s-2s_1071937?leftPanelTab=0%3Fsource%3Dyoutube&campaign=YouTube_Lovebabbar31stJan2021&utm_source=youtube&utm_medium=affiliate&utm_campaign=YouTube_Lovebabbar31stJan2021))
+    - Data Replacement (refer to "C360_sortZerosOnesAndTwosInLinkedList.cpp")
+    - Without Data Replacement (refer to "sortZerosOnesAndTwosNoDataReplacement.cpp")
+
+  - GeeksForGeeks - Check if Linked List is Palindrome ([view](https://www.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1))
+    - Using Extra Space (refer to "GFG_checkIfPalindromeLinkedList.cpp")
+    - Without Using Extra Space (refer to "checkIfPalindromeLinkedListNoExtraSpace.cpp")
