@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faulty Calculator</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter first number: ");
+        let b = prompt("Enter operator: ");
+        let c = prompt("Enter second number: ");
+
+        let replacement = 
+        {
+            '+' : '-',
+            '*' : '+',
+            '-' : '/',
+            '/' : '**'
+        }
+
+        let random = Math.random();
+        console.log(random);
+
+        if (random < 0.1)
+        {
+            b = replacement[b];
+            alert(`Result: ${eval(`${a} ${b} ${c}`)}`)
+        }
+        else
+        {
+            alert(`Result: ${eval(`${a} ${b} ${c}`)}`)
+        }
+    </script>
+</body>
+</html>
