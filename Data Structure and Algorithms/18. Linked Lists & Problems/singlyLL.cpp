@@ -380,3 +380,44 @@ void searchList(SLL* &head, int toSearch)
 
     return;
 }
+
+/*
+    reverseList() Function
+
+    Return type - pointer to head of the reversed list
+
+    Arguments
+        1. Reference to pointer to head of the list
+
+    Approach
+        1. Initialize three pointers - previous, current and forward
+        2. Traverse the list and reverse the nextLL pointers of each node until end of list is reached
+        3. Update head to point to the last node (new head) and return head
+        
+    Time Complexity: O(n) where n is the number of nodes in the list
+    Space Complexity: O(1)
+*/
+
+SLL* reverseList(SLL* &head) 
+{
+
+    SLL* previous = nullptr;
+    SLL* forward = nullptr;
+    SLL* current = head;
+
+    if (head == nullptr || head -> nextLL == nullptr)
+        return head;
+
+    while (current != nullptr)
+    {
+        if (current -> nextLL == nullptr)
+            head = current;
+                
+        forward = current -> nextLL;
+        current -> nextLL = previous;
+        previous = current;
+        current = forward;
+    }
+
+    return head;
+}
