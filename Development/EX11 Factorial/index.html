@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factorial Calculation</title>
+  </head>
+  <body>
+    <script>
+        let number = prompt("Enter the number: ");
+        let factorial = 1;
+
+        for(let i = 1; i <= number; i++)
+        {
+            factorial *= i;
+        }
+        alert(`Factorial of ${number} is: ${factorial}`);
+    </script>
+  </body>
+</html>
