@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 12 - Color the boxes</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        body h1 
+        {
+            padding: 2rem;
+        }
+        .boxContainer
+        {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .box
+        {
+            border: 3px solid;
+            padding: 1rem;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Color the Boxes randomly</h1>
+    <div class="boxContainer">
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+    </div>
+
+    <script>
+            let boxes = document.getElementsByClassName("box")
+
+            function color()
+            {
+                let colorOne = Math.floor(0 + Math.random() * 255)
+                let colorTwo = Math.floor(0 + Math.random() * 255)
+                let colorThree = Math.floor(0 + Math.random() * 255)
+
+                return  `rgb(${colorOne}, ${colorTwo}, ${colorThree})`
+            }
+
+            Array.from(boxes).forEach(element => {
+                element.style.backgroundColor = color();
+                element.style.color = color();
+            })
+    </script>
+  </body>
+</html>
