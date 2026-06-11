@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 13 - Dynamic Website Builder</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+      }
+      h1 {
+        margin: 2rem;
+        color: darkslategrey;
+      }
+      h2 {
+        margin: 1rem;
+        color: darkslategray;
+      }
+      .cardsContainer {
+        height: 50rem;
+        width: 80rem;
+        background-color: #ffffff;
+        border-radius: 1.5rem;
+        padding: 2rem;
+      }
+      .card {
+        display: flex;
+        width: 100%;
+        height: 8rem;
+        background: #ffffff;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        gap: 1.5rem;
+        margin: 1rem;
+      }
+      .card .imgContainer {
+        width: 19%;
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+      .imgContainer p {
+        background-color: #303030;
+        position: relative;
+        z-index: 1;
+        bottom: 45px;
+        right: -170px;
+        width: 50px;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.2rem;
+        color: #ffffff;
+      }
+      .textContent {
+        margin: 1rem;
+      }
+      .info {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0rem;
+      }
+
+      .info p {
+        color: rgb(120, 120, 120);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercise 13 - Dynamic Website Builder</h1>
+    <div class="cardsContainer">
+      <h2>Cards</h2>
+    </div>
+    <script>
+      function createCard(title, cName, views, monthsOld, duration, thumbnail) {
+        if (views < 1000000) {
+          views = Math.floor(views / 1000) + "K Views";
+        } else if (views > 1000000) {
+          views = Math.floor(views / 1000000) + "M Views";
+        } else {
+          views = Math.floor(views / 1000) + "K Views";
+        }
+
+        let html = `<div class="card">
+                        <div class="imgContainer">
+                            <img src="${thumbnail}" alt="Thumbnail" />
+                            <p>${duration}</p>
+                        </div>
+                        <div class="textContent">
+                            <h3>${title}</h3>
+                            <div class="info">
+                                <p>${cName}</p>
+                                <p>${views}</p>
+                                <p>${monthsOld} months ago</p>
+                            </div>
+                        </div>
+                    </div>`;
+
+        document.querySelector(".cardsContainer").innerHTML =
+          document.querySelector(".cardsContainer").innerHTML + html;
+      }
+
+      createCard(
+        "Second Video For Card",
+        "CodeWithHarry",
+        2368232,
+        3,
+        "23:08",
+        "https://i.ytimg.com/vi/UzYRQURh_pY/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDTqMJ5eoQurpJcoG85qq-pkw7QnQ",
+      );
+    </script>
+  </body>
+</html>
