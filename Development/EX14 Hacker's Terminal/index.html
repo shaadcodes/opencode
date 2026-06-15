@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You're Being Hacked!</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50rem;
+      }
+      #terminal {
+        height: 40rem;
+        width: 40rem;
+        background-color: #003e14;
+        border-radius: 1rem;
+        color: #35ff75;
+        padding: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="terminal"></div>
+    <script>
+      let terminal = document.getElementById("terminal");
+
+      let line1 = document.createElement("p");
+      line1.textContent = "Initializing Hacking";
+
+      let line2 = document.createElement("p");
+      line2.textContent = "Reading your files";
+
+      let line3 = document.createElement("p");
+      line3.textContent = "Password files detected";
+
+      let line4 = document.createElement("p");
+      line4.textContent = "Sending passwords and personal files to server";
+
+      let line5 = document.createElement("p");
+      line5.textContent = "Cleaning up";
+
+      function delay() {
+        let delay = Math.ceil(1000 + Math.random() * 6001);
+        return delay;
+      }
+
+      async function putLine(textOfLine) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            terminal.append(textOfLine);
+            resolve("Successful");
+          }, delay());
+        });
+      }
+
+      async function main() {
+        await putLine(line1);
+        await putLine(line2);
+        await putLine(line3);
+        await putLine(line4);
+        await putLine(line5);
+      }
+
+      function addDots() {
+        let t = setInterval(() => {
+          let lastPart = terminal.lastElementChild;
+
+          if (lastPart.innerHTML.endsWith("...")) {
+            lastPart.innerHTML = lastPart.innerHTML.slice(
+              0,
+              lastPart.innerHTML.length - 3,
+            );
+          } else {
+            lastPart.innerHTML = lastPart.innerHTML + ".";
+          }
+        }, 800);
+      }
+
+      main();
+      addDots();
+    </script>
+  </body>
+</html>
