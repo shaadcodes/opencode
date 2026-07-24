@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token Manager</title>
+  </head>
+  <body></body>
+  <script>
+    function setAuthToken(authToken, expirationTime) {
+      let time = new Date();
+
+      let expiryTime = time.getTime() + expirationTime * 60 * 1000;
+
+      const tokenObject = { value: authToken, expiresAt: expiryTime};
+
+      localStorage.setItem("AuthenticationToken", JSON.stringify(tokenObject));
+    }
+
+    function getToken() {
+      const tokenValue = localStorage.getItem("AuthenticationToken");
+
+      if (!tokenValue) return null;
+
+      try {
+        const tokenObject = JSON.parse(tokenValue);
+
+        let now = new Date();
+
+        if (now.getTime() > tokenObject.expiryTime) {
+          localStorage.removeItem("AuthenticationToken");
+          return null;
+        }
+
+        document.write(tokenObject.value);
+      } catch (error) {
+        console.log("Error occurred: ", error);
+      }
+    }
+
+    setAuthToken('aidug24g34g3rjefb', 1);
+    getToken();
+  </script>
+</html>
