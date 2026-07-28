@@ -1,0 +1,296 @@
+<!-- 14. The Window Scroller:
+     You are developing a single-page application with a smooth scrolling effect. Implement a function named smoothScrollToTop that smoothly scrolls the window to the top when called. -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Scroller</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+      }
+      .container {
+        background-color: #006691;
+      }
+      #stickyButton button {
+        position: fixed;
+        bottom: 5vh;
+        left: 70vw;
+        border: none;
+        padding: 1rem;
+        background-color: rgb(41, 127, 255);
+        color: #fff;
+        border-radius: 1rem;
+        transition: all 0.3s;
+      }
+      #stickyButton button:hover {
+        background-color: rgb(0, 89, 223);
+        border-radius: 0;
+      }
+      .randomCards {
+        margin: 2rem;
+        padding: 2rem;
+        border: 5px solid rgb(41, 127, 255);
+        border-radius: 1rem;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="stickyButton">
+        <button id="buttonToTop" onclick="smoothScrollToTop()">
+          Back To Top
+        </button>
+      </div>
+      <div class="randomCards">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A tenetur
+          incidunt dolorum enim similique, consectetur laborum ipsum, quas
+          beatae, exercitationem dicta ab! Pariatur obcaecati rerum iusto
+          architecto praesentium aperiam quas molestias cum ducimus! Vero qui
+          beatae nihil. Blanditiis nihil hic rerum voluptatem, dolorem
+          accusantium nulla at, omnis veritatis eveniet adipisci saepe. Dolore,
+          est inventore blanditiis deleniti unde quibusdam perspiciatis.
+          Quisquam cupiditate aliquam at a veniam eius eveniet reiciendis
+          sapiente. Itaque consectetur eveniet quaerat ipsa possimus expedita!
+          Eveniet unde voluptas illo quos aliquam, cupiditate quas ipsum
+          asperiores aliquid nisi sapiente ducimus velit corrupti adipisci quo
+          voluptatibus magni inventore delectus ipsa. Repellat molestias
+          consequuntur totam blanditiis sed magni, aliquid veniam rerum sit iste
+          quam ab minima tempore cupiditate sunt! Doloribus architecto iusto
+          incidunt, vero soluta molestiae, officiis, blanditiis quas esse nemo
+          sit omnis numquam. Accusamus vitae sunt doloribus. Eveniet dolor saepe
+          voluptates deserunt facere magni corrupti magnam ad sapiente repellat,
+          quaerat at, fugiat alias eos suscipit placeat! Explicabo facilis est,
+          sunt vero incidunt pariatur consectetur excepturi voluptatibus
+          laudantium nihil modi quae omnis nulla tenetur cum? At cumque tempora
+          ipsa rem, necessitatibus aperiam! Qui debitis corrupti maxime,
+          perferendis id numquam. Quasi ut praesentium fugiat debitis sed enim
+          illo. Quia rem numquam odio officiis fuga. Nemo dolores corrupti, odio
+          veniam deleniti officiis? Aliquid similique aspernatur accusamus
+          architecto inventore molestias ratione autem, totam dolor doloribus
+          sint expedita. Autem sunt inventore, rerum illum iste harum nihil
+          mollitia officiis delectus quibusdam ut eum, at obcaecati reiciendis.
+          Aperiam eligendi dolores repellat eveniet nihil voluptatem reiciendis
+          nulla quaerat perferendis excepturi. Ipsam voluptatibus quia eveniet
+          consequatur delectus rem repellat pariatur ea aliquam nostrum et
+          accusantium, eos neque ex, non provident cumque vero harum saepe
+          ratione, amet at! Molestias placeat maxime quos neque quia repudiandae
+          recusandae saepe inventore voluptate corrupti atque, voluptatibus hic
+          dolores nostrum numquam tempora culpa praesentium nam itaque.
+        </p>
+      </div>
+      <div class="randomCards">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A tenetur
+          incidunt dolorum enim similique, consectetur laborum ipsum, quas
+          beatae, exercitationem dicta ab! Pariatur obcaecati rerum iusto
+          architecto praesentium aperiam quas molestias cum ducimus! Vero qui
+          beatae nihil. Blanditiis nihil hic rerum voluptatem, dolorem
+          accusantium nulla at, omnis veritatis eveniet adipisci saepe. Dolore,
+          est inventore blanditiis deleniti unde quibusdam perspiciatis.
+          Quisquam cupiditate aliquam at a veniam eius eveniet reiciendis
+          sapiente. Itaque consectetur eveniet quaerat ipsa possimus expedita!
+          Eveniet unde voluptas illo quos aliquam, cupiditate quas ipsum
+          asperiores aliquid nisi sapiente ducimus velit corrupti adipisci quo
+          voluptatibus magni inventore delectus ipsa. Repellat molestias
+          consequuntur totam blanditiis sed magni, aliquid veniam rerum sit iste
+          quam ab minima tempore cupiditate sunt! Doloribus architecto iusto
+          incidunt, vero soluta molestiae, officiis, blanditiis quas esse nemo
+          sit omnis numquam. Accusamus vitae sunt doloribus. Eveniet dolor saepe
+          voluptates deserunt facere magni corrupti magnam ad sapiente repellat,
+          quaerat at, fugiat alias eos suscipit placeat! Explicabo facilis est,
+          sunt vero incidunt pariatur consectetur excepturi voluptatibus
+          laudantium nihil modi quae omnis nulla tenetur cum? At cumque tempora
+          ipsa rem, necessitatibus aperiam! Qui debitis corrupti maxime,
+          perferendis id numquam. Quasi ut praesentium fugiat debitis sed enim
+          illo. Quia rem numquam odio officiis fuga. Nemo dolores corrupti, odio
+          veniam deleniti officiis? Aliquid similique aspernatur accusamus
+          architecto inventore molestias ratione autem, totam dolor doloribus
+          sint expedita. Autem sunt inventore, rerum illum iste harum nihil
+          mollitia officiis delectus quibusdam ut eum, at obcaecati reiciendis.
+          Aperiam eligendi dolores repellat eveniet nihil voluptatem reiciendis
+          nulla quaerat perferendis excepturi. Ipsam voluptatibus quia eveniet
+          consequatur delectus rem repellat pariatur ea aliquam nostrum et
+          accusantium, eos neque ex, non provident cumque vero harum saepe
+          ratione, amet at! Molestias placeat maxime quos neque quia repudiandae
+          recusandae saepe inventore voluptate corrupti atque, voluptatibus hic
+          dolores nostrum numquam tempora culpa praesentium nam itaque.
+        </p>
+      </div>
+      <div class="randomCards">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A tenetur
+          incidunt dolorum enim similique, consectetur laborum ipsum, quas
+          beatae, exercitationem dicta ab! Pariatur obcaecati rerum iusto
+          architecto praesentium aperiam quas molestias cum ducimus! Vero qui
+          beatae nihil. Blanditiis nihil hic rerum voluptatem, dolorem
+          accusantium nulla at, omnis veritatis eveniet adipisci saepe. Dolore,
+          est inventore blanditiis deleniti unde quibusdam perspiciatis.
+          Quisquam cupiditate aliquam at a veniam eius eveniet reiciendis
+          sapiente. Itaque consectetur eveniet quaerat ipsa possimus expedita!
+          Eveniet unde voluptas illo quos aliquam, cupiditate quas ipsum
+          asperiores aliquid nisi sapiente ducimus velit corrupti adipisci quo
+          voluptatibus magni inventore delectus ipsa. Repellat molestias
+          consequuntur totam blanditiis sed magni, aliquid veniam rerum sit iste
+          quam ab minima tempore cupiditate sunt! Doloribus architecto iusto
+          incidunt, vero soluta molestiae, officiis, blanditiis quas esse nemo
+          sit omnis numquam. Accusamus vitae sunt doloribus. Eveniet dolor saepe
+          voluptates deserunt facere magni corrupti magnam ad sapiente repellat,
+          quaerat at, fugiat alias eos suscipit placeat! Explicabo facilis est,
+          sunt vero incidunt pariatur consectetur excepturi voluptatibus
+          laudantium nihil modi quae omnis nulla tenetur cum? At cumque tempora
+          ipsa rem, necessitatibus aperiam! Qui debitis corrupti maxime,
+          perferendis id numquam. Quasi ut praesentium fugiat debitis sed enim
+          illo. Quia rem numquam odio officiis fuga. Nemo dolores corrupti, odio
+          veniam deleniti officiis? Aliquid similique aspernatur accusamus
+          architecto inventore molestias ratione autem, totam dolor doloribus
+          sint expedita. Autem sunt inventore, rerum illum iste harum nihil
+          mollitia officiis delectus quibusdam ut eum, at obcaecati reiciendis.
+          Aperiam eligendi dolores repellat eveniet nihil voluptatem reiciendis
+          nulla quaerat perferendis excepturi. Ipsam voluptatibus quia eveniet
+          consequatur delectus rem repellat pariatur ea aliquam nostrum et
+          accusantium, eos neque ex, non provident cumque vero harum saepe
+          ratione, amet at! Molestias placeat maxime quos neque quia repudiandae
+          recusandae saepe inventore voluptate corrupti atque, voluptatibus hic
+          dolores nostrum numquam tempora culpa praesentium nam itaque.
+        </p>
+      </div>
+      <div class="randomCards">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A tenetur
+          incidunt dolorum enim similique, consectetur laborum ipsum, quas
+          beatae, exercitationem dicta ab! Pariatur obcaecati rerum iusto
+          architecto praesentium aperiam quas molestias cum ducimus! Vero qui
+          beatae nihil. Blanditiis nihil hic rerum voluptatem, dolorem
+          accusantium nulla at, omnis veritatis eveniet adipisci saepe. Dolore,
+          est inventore blanditiis deleniti unde quibusdam perspiciatis.
+          Quisquam cupiditate aliquam at a veniam eius eveniet reiciendis
+          sapiente. Itaque consectetur eveniet quaerat ipsa possimus expedita!
+          Eveniet unde voluptas illo quos aliquam, cupiditate quas ipsum
+          asperiores aliquid nisi sapiente ducimus velit corrupti adipisci quo
+          voluptatibus magni inventore delectus ipsa. Repellat molestias
+          consequuntur totam blanditiis sed magni, aliquid veniam rerum sit iste
+          quam ab minima tempore cupiditate sunt! Doloribus architecto iusto
+          incidunt, vero soluta molestiae, officiis, blanditiis quas esse nemo
+          sit omnis numquam. Accusamus vitae sunt doloribus. Eveniet dolor saepe
+          voluptates deserunt facere magni corrupti magnam ad sapiente repellat,
+          quaerat at, fugiat alias eos suscipit placeat! Explicabo facilis est,
+          sunt vero incidunt pariatur consectetur excepturi voluptatibus
+          laudantium nihil modi quae omnis nulla tenetur cum? At cumque tempora
+          ipsa rem, necessitatibus aperiam! Qui debitis corrupti maxime,
+          perferendis id numquam. Quasi ut praesentium fugiat debitis sed enim
+          illo. Quia rem numquam odio officiis fuga. Nemo dolores corrupti, odio
+          veniam deleniti officiis? Aliquid similique aspernatur accusamus
+          architecto inventore molestias ratione autem, totam dolor doloribus
+          sint expedita. Autem sunt inventore, rerum illum iste harum nihil
+          mollitia officiis delectus quibusdam ut eum, at obcaecati reiciendis.
+          Aperiam eligendi dolores repellat eveniet nihil voluptatem reiciendis
+          nulla quaerat perferendis excepturi. Ipsam voluptatibus quia eveniet
+          consequatur delectus rem repellat pariatur ea aliquam nostrum et
+          accusantium, eos neque ex, non provident cumque vero harum saepe
+          ratione, amet at! Molestias placeat maxime quos neque quia repudiandae
+          recusandae saepe inventore voluptate corrupti atque, voluptatibus hic
+          dolores nostrum numquam tempora culpa praesentium nam itaque.
+        </p>
+      </div>
+      <div class="randomCards">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A tenetur
+          incidunt dolorum enim similique, consectetur laborum ipsum, quas
+          beatae, exercitationem dicta ab! Pariatur obcaecati rerum iusto
+          architecto praesentium aperiam quas molestias cum ducimus! Vero qui
+          beatae nihil. Blanditiis nihil hic rerum voluptatem, dolorem
+          accusantium nulla at, omnis veritatis eveniet adipisci saepe. Dolore,
+          est inventore blanditiis deleniti unde quibusdam perspiciatis.
+          Quisquam cupiditate aliquam at a veniam eius eveniet reiciendis
+          sapiente. Itaque consectetur eveniet quaerat ipsa possimus expedita!
+          Eveniet unde voluptas illo quos aliquam, cupiditate quas ipsum
+          asperiores aliquid nisi sapiente ducimus velit corrupti adipisci quo
+          voluptatibus magni inventore delectus ipsa. Repellat molestias
+          consequuntur totam blanditiis sed magni, aliquid veniam rerum sit iste
+          quam ab minima tempore cupiditate sunt! Doloribus architecto iusto
+          incidunt, vero soluta molestiae, officiis, blanditiis quas esse nemo
+          sit omnis numquam. Accusamus vitae sunt doloribus. Eveniet dolor saepe
+          voluptates deserunt facere magni corrupti magnam ad sapiente repellat,
+          quaerat at, fugiat alias eos suscipit placeat! Explicabo facilis est,
+          sunt vero incidunt pariatur consectetur excepturi voluptatibus
+          laudantium nihil modi quae omnis nulla tenetur cum? At cumque tempora
+          ipsa rem, necessitatibus aperiam! Qui debitis corrupti maxime,
+          perferendis id numquam. Quasi ut praesentium fugiat debitis sed enim
+          illo. Quia rem numquam odio officiis fuga. Nemo dolores corrupti, odio
+          veniam deleniti officiis? Aliquid similique aspernatur accusamus
+          architecto inventore molestias ratione autem, totam dolor doloribus
+          sint expedita. Autem sunt inventore, rerum illum iste harum nihil
+          mollitia officiis delectus quibusdam ut eum, at obcaecati reiciendis.
+          Aperiam eligendi dolores repellat eveniet nihil voluptatem reiciendis
+          nulla quaerat perferendis excepturi. Ipsam voluptatibus quia eveniet
+          consequatur delectus rem repellat pariatur ea aliquam nostrum et
+          accusantium, eos neque ex, non provident cumque vero harum saepe
+          ratione, amet at! Molestias placeat maxime quos neque quia repudiandae
+          recusandae saepe inventore voluptate corrupti atque, voluptatibus hic
+          dolores nostrum numquam tempora culpa praesentium nam itaque.
+        </p>
+      </div>
+      <div class="randomCards">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A tenetur
+          incidunt dolorum enim similique, consectetur laborum ipsum, quas
+          beatae, exercitationem dicta ab! Pariatur obcaecati rerum iusto
+          architecto praesentium aperiam quas molestias cum ducimus! Vero qui
+          beatae nihil. Blanditiis nihil hic rerum voluptatem, dolorem
+          accusantium nulla at, omnis veritatis eveniet adipisci saepe. Dolore,
+          est inventore blanditiis deleniti unde quibusdam perspiciatis.
+          Quisquam cupiditate aliquam at a veniam eius eveniet reiciendis
+          sapiente. Itaque consectetur eveniet quaerat ipsa possimus expedita!
+          Eveniet unde voluptas illo quos aliquam, cupiditate quas ipsum
+          asperiores aliquid nisi sapiente ducimus velit corrupti adipisci quo
+          voluptatibus magni inventore delectus ipsa. Repellat molestias
+          consequuntur totam blanditiis sed magni, aliquid veniam rerum sit iste
+          quam ab minima tempore cupiditate sunt! Doloribus architecto iusto
+          incidunt, vero soluta molestiae, officiis, blanditiis quas esse nemo
+          sit omnis numquam. Accusamus vitae sunt doloribus. Eveniet dolor saepe
+          voluptates deserunt facere magni corrupti magnam ad sapiente repellat,
+          quaerat at, fugiat alias eos suscipit placeat! Explicabo facilis est,
+          sunt vero incidunt pariatur consectetur excepturi voluptatibus
+          laudantium nihil modi quae omnis nulla tenetur cum? At cumque tempora
+          ipsa rem, necessitatibus aperiam! Qui debitis corrupti maxime,
+          perferendis id numquam. Quasi ut praesentium fugiat debitis sed enim
+          illo. Quia rem numquam odio officiis fuga. Nemo dolores corrupti, odio
+          veniam deleniti officiis? Aliquid similique aspernatur accusamus
+          architecto inventore molestias ratione autem, totam dolor doloribus
+          sint expedita. Autem sunt inventore, rerum illum iste harum nihil
+          mollitia officiis delectus quibusdam ut eum, at obcaecati reiciendis.
+          Aperiam eligendi dolores repellat eveniet nihil voluptatem reiciendis
+          nulla quaerat perferendis excepturi. Ipsam voluptatibus quia eveniet
+          consequatur delectus rem repellat pariatur ea aliquam nostrum et
+          accusantium, eos neque ex, non provident cumque vero harum saepe
+          ratione, amet at! Molestias placeat maxime quos neque quia repudiandae
+          recusandae saepe inventore voluptate corrupti atque, voluptatibus hic
+          dolores nostrum numquam tempora culpa praesentium nam itaque.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    function smoothScrollToTop() {
+      let button = document.getElementById("buttonToTop");
+
+      button.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+    }
+  </script>
+</html>
