@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+#generate {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #00586c;
+  color: aliceblue;
+  font-size: large;
+  transition: all 0.3s;
+}
+
+#generate:active
+{
+  scale: 1.1;
+  background-color: #00313c;
+}
