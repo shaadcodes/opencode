@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inspiration&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Funnel Display', 'Google Sans', 'Inter', sans-serif;
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #282828;
+    height: 100vh;
+}
+
+.container
+{
+    background-color: #ff7489;
+    padding: 2rem;
+    border-radius: 0 0.5rem 2rem 0.5rem;
+}
+
+.container h1
+{
+    color: azure;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.fragmentContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #ad0000;
+    margin: 1rem;
+}
+
+.fragmentContainer h1
+{
+    color: #ad0000;
+    background-color: azure;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: #282828 1px 1px 2px 0px;
+}
+
+.timeDiv
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    height: 5rem;
+    width: 5rem;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: #282828 1px 1px 2px 0px;
+}
+
+.timeDiv span 
+{
+    font-size: xx-large;
+}
+
+.container h2
+{
+    color: azure;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#progressBar
+{
+    height: 0.5rem;
+    background-color: azure;
+    border-radius: 0rem 1rem 1rem 0rem;
+    overflow: hidden;
+}
+
+#progressCompleted
+{
+    background-color: #ad0000;
+    width: 0%;
+    height: 0.5rem;
+    border-radius: 0rem 1rem 1rem 0rem;
+    transition: width 0.3s;
+}
+
+.setTimer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+    color: azure;
+    margin-top: 1rem;
+}
+
+#setLabel
+{
+    align-self: flex-start;
+}
+
+#timerInput
+{
+    width: 20rem;
+    border: none;
+    padding: 0.5rem;
+    color: #ad0000;
+}
+
+#timerInput:focus
+{
+    outline: none;
+    padding: 0.5rem;
+    color: #ad0000;
+}
+
+#setButton
+{
+    margin-top: 1.5rem;
+    width: 5rem;
+    padding: 1rem 0.5rem;
+    border: none;
+    transition: all 0.3s;
+    border-radius: 0 0.5rem 1rem 0.5rem;
+}
+
+#setButton:hover
+{
+    scale: 1.1;
+    color: azure;
+    background: #ad0000;
+}
+
+#setButton:focus
+{
+    color: azure;
+    background: #ad0000;
+}
