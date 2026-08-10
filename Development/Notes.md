@@ -1,5 +1,7 @@
 # Web Development Using MERN Stack
-## Instructor - **Love Babbar** (founder of CodeHelp)
+## Instructors
+- **Love Babbar** (founder of CodeHelp)
+- **Haris Ali Khan** (founder of CodeWithHarry)
 Series - Complete Web Dev using MERN stack (https://www.youtube.com/watch?v=Vi9bxu-M-ag&list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD)
 
 ### 12th February 2026
@@ -395,3 +397,44 @@ Types of display properties:
 Position properties in CSS determine how an object or element may be positioned on the web page. Different position properties have different attributes for the object to which they're assigned. Different types of position properties include:  
 
 - **Static**: This is the default property for all elements. It does not allow the element to have any space from top, left, right or bottom. No custom value for z-index.  
+
+- **Relative**: <code>position: relative;</code>  positions an element relative to it's current position. Also used to create a bounding box for using <code>position: absolute;</code> for it's children.
+
+- **Absolute**: Positions an element relative to it's nearest relative-positioned ancestor.
+
+- **Fixed**: It positions an element relative to the viewport, enabling z-index for positioning between element layers. The position set using <code>position: fixed;</code> property is definite and does not change throughout the web-page or app. (fixed positioning removes all relations with the element's ancestors or children, the element becomes independant of the properties related to it's ancestors or children)
+
+- **Sticky**: It works like fixed positioning but retains relations with it's children and ancestors which allows the eleemnt to be positioned accourding to it's nearest relative-positioned ancestor.
+
+### 30 July 2026
+
+**CSS Variables**
+
+Variables in CSS hold a specific value with a custom name and can be used anywhere once declared. For example: we assign a variable name to the value of a specific color and reuse that variable throughout our workspace.
+
+*Definition of variables:* Variables are defined inside <code>:root{ }</code> block. 
+
+```css
+Syntax: --variableName: value;
+Example: --primaryColor: #ffffff;
+```
+
+*Use:* Variables are used wherever necessary using the <code>var();</code> function;
+
+```css
+background-color: var(--primaryColor);
+```
+
+**Media Queries**
+
+Media query is a powerful CSS functionality which enables developers to create responsive, device-preferred layouts for web pages and apps. Media queries define how a web page or a specific element would look in different viewports according to their width and height.
+
+_Use of Media Queries:_ Media queries are applied in CSS using <code>@media</code> keyword along with properties like screen etc. Also we can pass properties as width or height of viewport like max-width, min-width, max-height or min-height.
+
+**Flexbox and Grids**
+
+_Flexbox:_ CSS flexbox is a powerful and extensively used functionality which enables us to easily position elements, provide gap between them or place them accordingly. Flexbox helps in creating responsiveness in a webpage by adding dynamic spaces and positioning. Flexbox is enabled by setting <code>display: flex;</code>.
+
+_Grid:_ CSS Grids property distributes children in uniform spaces, creating visually appealing gaps and spaces between elements which are fully responsive and thus help in creating dynamically appealing web pages. Grids are used using <code>display: grid;</code>.
+
+(for use of variables, media queries, flexbox and grids refer to "IndexStyles.css" inside "Project - Netflix UI Clone (HTML, CSS)")
