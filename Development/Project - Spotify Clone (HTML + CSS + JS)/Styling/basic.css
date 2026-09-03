@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Funnel+Display:wght@300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inspiration&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --unfocused: #b3b3b3;
+  --button: #1f1f1f;
+  --highlight: #2a2a2a;
+  --background: #121212;
+  color: aliceblue;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navBottom {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: calc(15rem + 10vw) 1fr;
+  height: 100vh;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+  gap: 0.5rem;
+}

@@ -1,0 +1,145 @@
+nav 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 1.5rem;
+    height: 4rem;
+}
+
+.leftNav, .leftNav > a
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+}
+
+.homeNsearch
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#home
+{
+    border: none;
+    transition: all 0.3s;
+}
+
+#home:hover
+{
+    background-color: var(--highlight);
+}
+
+.searchBar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar input
+{
+    display: flex;
+    background-color: var(--button);
+    border: none;
+    width: 40vw;
+    text-align: start;
+    padding: 1rem;
+    border-radius: 5rem;
+    transition: all 0.3s;
+}
+
+.searchBar:hover
+{
+    input{
+        background-color: var(--highlight);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    }
+}
+
+.searchBar input:focus
+{
+    border: 3px solid white;
+    outline: none;
+}
+
+.buttons
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 39%;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+
+#search, #browse
+{
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+#browse a svg
+{
+    fill: var(--unfocused);
+}
+
+.rightNav
+{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.appInstall
+{
+    display: flex;
+    gap: 0.5rem;
+    color: var(--unfocused);
+    align-items: center;
+    cursor: pointer;
+    margin: 0 1rem;
+    transition: all 0.3s;
+}
+
+.appInstall svg
+{
+    height: 1rem;
+}
+
+.appInstall p
+{
+    font-weight: 500;
+}
+
+.signUpLogin
+{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.signUpLogin a
+{
+    color: var(--unfocused);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.signUpLogin button
+{
+    width: 6rem;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.signUpLogin button:hover
+{
+    color: black;
+}
