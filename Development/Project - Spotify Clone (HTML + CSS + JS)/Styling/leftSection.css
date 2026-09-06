@@ -1,0 +1,157 @@
+.left {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  overflow-y: hidden;
+  transition: all 0.3s ease;
+}
+
+.musicWindow {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  overflow-y: auto;
+  min-height: 10rem;
+  overflow-y: auto;
+}
+
+.musicCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    90deg,
+    rgba(30, 215, 96, 0) 0%,
+    rgba(0, 120, 43, 0) 0%
+  );
+  transition: all 0.3s;
+}
+
+.musicCard .titleContainer {
+  width: 10rem;
+  overflow-x: auto;
+  transition: all 0.3s ease;
+}
+
+.musicCard .titleContainer p {
+  font-size: small;
+}
+
+.musicCard p {
+  width: 50rem;
+  text-overflow: ellipsis;
+  overflow-y: hidden;
+}
+
+.musicCard:hover {
+  background-image: linear-gradient(
+    90deg,
+    rgb(23, 162, 72) 0%,
+    rgba(0, 120, 43, 0.76) 100%
+  );
+
+  .imgContainer {
+    box-shadow: -5px 5px 35px -10px #1ed760;
+  }
+}
+
+.musicCard .imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  overflow: hidden;
+  box-shadow: inset 5px -5px 25px -20px #00782b;
+  transition: 0.3s ease-in-out;
+}
+
+.leftCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.musicCard .svgContainer {
+  display: flex;
+  background-color: #1ed760;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.musicCard .svgContainer:hover {
+  background-color: #3be477;
+}
+
+.musicCard .svgContainer svg {
+  fill: black;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.links a {
+  font-size: smaller;
+  color: var(--unfocused);
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.leftBottom {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.leftBottom > a {
+  font-size: smaller;
+  margin: 1.5rem 0;
+  color: white;
+  text-decoration: none;
+}
+
+.leftBottom > a:hover {
+  text-decoration: underline;
+}
+
+.languageButton {
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--unfocused);
+  gap: 0.5rem;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.languageButton p {
+  font-size: small;
+  font-weight: 500;
+}
+
+.languageButton .svgContainer svg {
+  fill: white;
+  height: 1rem;
+  width: 1rem;
+}

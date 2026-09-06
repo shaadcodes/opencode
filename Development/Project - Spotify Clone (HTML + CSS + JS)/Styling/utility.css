@@ -1,0 +1,48 @@
+.invert 
+{
+    filter: invert(1);
+}
+
+.icon-mid
+{
+    padding: 0.3rem;
+}
+
+.button
+{
+   background-color: var(--button);
+   border: none;
+   cursor: pointer;
+   padding: 0.7rem;
+   border-radius: 2rem;
+   height: 2.8rem;
+   width: 2.8rem;
+}
+
+.icon-small
+{
+    width: 1rem;
+}
+
+.svgContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svgContainer svg
+{
+    fill: var(--unfocused);
+}
+
+.hover:hover
+{
+    scale: 1.05;
+    color: white;
+
+    svg
+    {
+        fill: white;
+    }
+}

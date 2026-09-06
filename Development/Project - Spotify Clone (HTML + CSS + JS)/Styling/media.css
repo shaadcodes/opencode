@@ -1,0 +1,91 @@
+@media screen and (max-width: 1200px) {
+  .musicCard {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .navBottom {
+    grid-template-columns: calc(3rem + 10vw) 1fr;
+  }
+  .left {
+    align-content: center;
+    padding: 1rem;
+  }
+  .leftBottom {
+    display: none;
+  }
+  .musicWindow {
+    max-height: 25rem;
+    overflow-y: auto;
+  }
+  .musicCard .titleContainer {
+    display: none;
+  }
+
+  .musicCard .svgContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .rightNav {
+    display: none;
+  }
+  .leftNav {
+    width: 90vw;
+  }
+  .homeNsearch {
+    justify-content: flex-start;
+    width: 90%;
+  }
+  .searchBar input {
+    width: 60vw;
+  }
+  .buttons {
+    width: 58%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navBottom {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+  .musicCard {
+    justify-content: space-between;
+  }
+  .musicCard .titleContainer {
+    display: block;
+  }
+  .musicCard .svgContainer {
+    display: flex;
+  }
+  .leftTop {
+    height: 25rem;
+  }
+  #elapsed,
+  #total {
+    font-size: 8px;
+  }
+  .playerButtons svg {
+    height: 1rem;
+    width: 1rem;
+  }
+  .info,
+  .volumeControls {
+    width: 20%;
+    min-width: 3rem;
+    gap: 0.5rem;
+  }
+  .textContainer {
+    height: 2rem;
+    width: 50%;
+  }
+  .textContainer p {
+    font-size: 8px;
+  }
+  .player {
+    gap: 0.5rem;
+  }
+}
