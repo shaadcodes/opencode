@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter(X)</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search_home_notifications_follow"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <style>
+      .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: 300;
+        font-style: normal;
+        font-size: 28px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+    <!-- black 0f1419 
+        blue 1d9bf0
+    -->
+  </head>
+  <body class="flex justify-start">
+    <div class="flex flex-col h-dvh w-100 max-xl:w-36 items-end justify-between">
+      <div class="flex flex-col items-start upperpart text-[#0f1419]">
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          class="r-4qtqp9 w-8 mt-4 ml-2 mb-4 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-18jsvk2 r-16y2uox r-8kz0gk"
+        >
+          <g>
+            <path
+              d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z"
+            ></path>
+          </g>
+        </svg>
+        <div id="home" class="flex items-center pt-[0.3rem] hover:bg-gray-300">
+          <span class="material-symbols-outlined p-1.5"> home </span>
+          <p class="text-xl p-2 max-xl:hidden">Home</p>
+        </div>
+        <div
+          id="explore"
+          class="flex items-center pt-[0.3rem] hover:bg-gray-300"
+        >
+          <span class="material-symbols-outlined p-1.5"> search </span>
+          <p class="text-xl p-2 max-xl:hidden">Explore</p>
+        </div>
+        <div
+          id="notifications"
+          class="flex items-center pt-[0.3rem] hover:bg-gray-300"
+        >
+          <span class="material-symbols-outlined p-1.5"> notifications </span>
+          <p class="text-xl p-2 max-xl:hidden">Notifications</p>
+        </div>
+        <div
+          id="follow"
+          class="flex items-center pt-[0.3rem] hover:bg-gray-300"
+        >
+          <span class="material-symbols-outlined p-1.5"> person_add </span>
+          <p class="text-xl p-2 max-xl:hidden">Follow</p>
+        </div>
+        <div id="chat" class="flex items-center pt-[0.3rem] hover:bg-gray-300">
+          <span class="material-symbols-outlined p-1.5"> chat_bubble </span>
+          <p class="text-xl p-2 max-xl:hidden">Chat</p>
+        </div>
+        <div id="grok" class="flex items-center pt-[0.3rem] hover:bg-gray-300">
+          <span class="material-symbols-outlined p-1.5"> robot_2 </span>
+          <p class="text-xl p-2 max-xl:hidden">Grok</p>
+        </div>
+        <div
+          id="bookmarks"
+          class="flex items-center pt-[0.3rem] hover:bg-gray-300"
+        >
+          <span class="material-symbols-outlined p-1.5"> bookmark </span>
+          <p class="text-xl p-2 max-xl:hidden">Bookmarks</p>
+        </div>
+        <div
+          id="creator"
+          class="flex items-center pt-[0.3rem] hover:bg-gray-300"
+        >
+          <span class="material-symbols-outlined p-1.5"> rocket_launch </span>
+          <p class="text-xl p-2 text-nowrap max-xl:hidden">Creator Studio</p>
+        </div>
+        <div
+          id="premium"
+          class="flex items-center pt-[0.3rem] hover:bg-gray-300"
+        >
+          <span class="material-symbols-outlined p-1.5"> crown </span>
+          <p class="text-xl p-2 max-xl:hidden">Premium</p>
+        </div>
+        <div
+          id="profile"
+          class="flex items-center pt-[0.3rem] hover:bg-gray-300"
+        >
+          <span class="material-symbols-outlined p-1.5"> account_circle </span>
+          <p class="text-xl p-2 max-xl:hidden">Profile</p>
+        </div>
+        <div id="more" class="flex items-center pt-[0.3rem] hover:bg-gray-300">
+          <span class="material-symbols-outlined p-1.5"> more_horiz </span>
+          <p class="text-xl p-2 max-xl:hidden">More</p>
+        </div>
+        <div
+          id="post"
+          class="flex items-center justify-center mt-[0.8rem] p-3 w-[95%] bg-[rgb(15,20,25)] text-white rounded-4xl max-xl:rounded-full max-xl:size-12 font-bold"
+        >
+          <p class="max-xl:hidden">Post</p>
+          <p class="xl:hidden">
+            <span class="material-symbols-outlined"> border_color </span>
+          </p>
+        </div>
+      </div>
+      <div class="lowerpart flex flex-col items-start max-xl:items-center upperpart w-60 max-xl:w-30 mb-4">
+        <div
+          id="myprofile"
+          class="flex items-center gap-2 max-xl:gap-0 mt-[0.8rem] p-2 max-xl:p-0 w-[95%] max-xl:w-0 rounded-[3rem] hover:bg-gray-300"
+        >
+          <span
+            class="material-symbols-outlined text-[#0f1419]"
+            style="font-size: 48px"
+          >
+            account_circle
+          </span>
+          <div>
+            <h4 class="font-bold text-[#0f1419] max-xl:hidden">Profile Name</h4>
+            <p class="text-gray-500 max-xl:hidden">@username</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="relative w-170 ml-4 flex flex-col border border-gray-100 scroll-auto mr-4"
+    >
+      <div
+        class="flex items-center justify-between tab p-4s sticky top-0 z-10 backdrop-blur-2xl border-b border-gray-100 text-[#536471] font-medium w-full bg-white/80"
+      >
+        <div class="tab p-4">For You</div>
+        <div class="tab p-4">Following</div>
+        <div class="tab p-4">News</div>
+        <div class="tab p-4">Business</div>
+        <div class="tab p-4">Tech</div>
+        <div
+          class="flex items-center justify-center more p-3 size-10 rounded-[50%] hover:bg-gray-200"
+        >
+          <p class="text-xl">+</p>
+        </div>
+      </div>
+      <div class="postSomething flex mt-15">
+        <span
+          class="material-symbols-outlined ml-3 text-gray-500"
+          style="font-size: 48px"
+        >
+          account_circle
+        </span>
+        <textarea
+          autocapitalize="sentences"
+          autocomplete="on"
+          autocorrect="on"
+          placeholder="What’s happening?"
+          spellcheck="true"
+          class="w-full h-28 resize-none p-4"
+        ></textarea>
+      </div>
+      <div class="flex justify-between pr-8 lowerTextArea">
+        <div class="flex gap-4 ml-16 mt-2 text-gray-400">
+          <span class="material-symbols-outlined"> imagesmode </span>
+          <span class="material-symbols-outlined"> gif_box </span>
+          <span class="material-symbols-outlined"> robot_2 </span>
+          <span class="material-symbols-outlined"> page_info </span>
+          <span class="material-symbols-outlined"> calendar_clock </span>
+          <span class="material-symbols-outlined"> location_on </span>
+          <span class="material-symbols-outlined"> flag_2 </span>
+        </div>
+        <button
+          id="postButton"
+          class="text-white font-bold rounded-4xl pr-4 pl-4 pt-2 pb-2 bg-[rgb(29,155,240)]"
+        >
+          Post
+        </button>
+      </div>
+      <div class="post flex pt-2 pr-2 border-t border-b border-gray-100 mt-2">
+        <div class="postProfile p-4">
+          <span
+            class="material-symbols-outlined"
+            style="font-size: 40px; color: cadetblue"
+          >
+            face
+          </span>
+        </div>
+        <div class="postContent flex flex-col gap-3">
+          <div class="titleContainer flex gap-2">
+            <h4 class="postedBy font-bold">Account Name</h4>
+            <p class="username text-gray-500">@username</p>
+            <p class="time text-gray-500">24h</p>
+          </div>
+          <div class="translationContainer flex gap-2.5">
+            <span class="material-symbols-outlined text-gray-500">
+              robot_2
+            </span>
+            <p class="translatedFrom text-gray-500">Translated from Hindi</p>
+            <a href="#translate" class="showOriginal text-[#1d9bf0]"
+              >Show original</a
+            >
+          </div>
+          <p class="postDescription">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+            commodi, facere dignissimos corporis omnis error minus maxime
+            perferendis. Eligendi soluta, dignissimos tempora error voluptatem
+            adipisci!
+          </p>
+          <div
+            class="mediaContainer w-[70%] aspect-video rounded-2xl overflow-clip"
+          >
+            <img
+              src="https://wallpapers.com/images/hd/4k-ultra-hd-dark-red-moon-jsx6twcf781rbz1c.jpg"
+              alt="Image"
+              class="size-full object-center object-cover"
+            />
+          </div>
+          <div class="postInteraction flex justify-between text-gray-500">
+            <span class="material-symbols-outlined"> comment </span>
+            <p>500</p>
+            <span class="material-symbols-outlined"> forward </span>
+            <p>500</p>
+            <span class="material-symbols-outlined"> favorite </span>
+            <p>500</p>
+            <span class="material-symbols-outlined"> bar_chart </span>
+            <p>500</p>
+            <div class="saveUploadContainer">
+              <span class="material-symbols-outlined"> bookmark </span
+              ><span class="material-symbols-outlined"> upload </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post flex pt-2 pb-2 pr-2 border-b border-gray-100 mt-2">
+        <div class="postProfile p-4">
+          <span
+            class="material-symbols-outlined"
+            style="font-size: 40px; color: cadetblue"
+          >
+            face
+          </span>
+        </div>
+        <div class="postContent flex flex-col gap-3">
+          <div class="titleContainer flex gap-2">
+            <h4 class="postedBy font-bold">Account Name</h4>
+            <p class="username text-gray-500">@username</p>
+            <p class="time text-gray-500">24h</p>
+          </div>
+          <div class="translationContainer flex gap-2.5">
+            <span class="material-symbols-outlined text-gray-500">
+              robot_2
+            </span>
+            <p class="translatedFrom text-gray-500">Translated from Hindi</p>
+            <a href="#translate" class="showOriginal text-[#1d9bf0]"
+              >Show original</a
+            >
+          </div>
+          <p class="postDescription">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+            commodi, facere dignissimos corporis omnis error minus maxime
+            perferendis. Eligendi soluta, dignissimos tempora error voluptatem
+            adipisci!
+          </p>
+          <div
+            class="mediaContainer w-[70%] aspect-video rounded-2xl overflow-clip"
+          >
+            <img
+              src="https://wallpapers.com/images/hd/4k-ultra-hd-dark-red-moon-jsx6twcf781rbz1c.jpg"
+              alt="Image"
+              class="size-full object-center object-cover"
+            />
+          </div>
+          <div class="postInteraction flex justify-between text-gray-500">
+            <span class="material-symbols-outlined"> comment </span>
+            <p>500</p>
+            <span class="material-symbols-outlined"> forward </span>
+            <p>500</p>
+            <span class="material-symbols-outlined"> favorite </span>
+            <p>500</p>
+            <span class="material-symbols-outlined"> bar_chart </span>
+            <p>500</p>
+            <div class="saveUploadContainer">
+              <span class="material-symbols-outlined"> bookmark </span
+              ><span class="material-symbols-outlined"> upload </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post flex pt-2 pb-2 pr-2 border-b border-gray-100 mt-2">
+        <div class="postProfile p-4">
+          <span
+            class="material-symbols-outlined"
+            style="font-size: 40px; color: cadetblue"
+          >
+            face
+          </span>
+        </div>
+        <div class="postContent flex flex-col gap-3">
+          <div class="titleContainer flex gap-2">
+            <h4 class="postedBy font-bold">Account Name</h4>
+            <p class="username text-gray-500">@username</p>
+            <p class="time text-gray-500">24h</p>
+          </div>
+          <div class="translationContainer flex gap-2.5">
+            <span class="material-symbols-outlined text-gray-500">
+              robot_2
+            </span>
+            <p class="translatedFrom text-gray-500">Translated from Hindi</p>
+            <a href="#translate" class="showOriginal text-[#1d9bf0]"
+              >Show original</a
+            >
+          </div>
+          <p class="postDescription">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+            commodi, facere dignissimos corporis omnis error minus maxime
+            perferendis. Eligendi soluta, dignissimos tempora error voluptatem
+            adipisci!
+          </p>
+          <div
+            class="mediaContainer w-[70%] aspect-video rounded-2xl overflow-clip"
+          >
+            <img
+              src="https://wallpapers.com/images/hd/4k-ultra-hd-dark-red-moon-jsx6twcf781rbz1c.jpg"
+              alt="Image"
+              class="size-full object-center object-cover"
+            />
+          </div>
+          <div class="postInteraction flex justify-between text-gray-500">
+            <span class="material-symbols-outlined"> comment </span>
+            <p>500</p>
+            <span class="material-symbols-outlined"> forward </span>
+            <p>500</p>
+            <span class="material-symbols-outlined"> favorite </span>
+            <p>500</p>
+            <span class="material-symbols-outlined"> bar_chart </span>
+            <p>500</p>
+            <div class="saveUploadContainer">
+              <span class="material-symbols-outlined"> bookmark </span
+              ><span class="material-symbols-outlined"> upload </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col max-md:hidden">
+      <div
+        class="flex justify-center pt-2 pb-2 tab sticky top-0 bg-white text-[#536471] font-medium"
+      >
+        <input
+          type="text"
+          class="w-96 h-12 border rounded-3xl border-gray-300 p-3.5"
+          placeholder="Search..."
+        />
+      </div>
+      <div
+        class="flex flex-col gap-2 banner mt-8 mr-8 ml-8 p-4 rounded-2xl border border-gray-100"
+      >
+        <h4 class="font-bold text-xl">Subscribe to Premium</h4>
+        <p style="font-size: 15px">
+          Get rid of ads, see your analytics, boost your replies and unlock 20+
+          features.
+        </p>
+        <a
+          href=""
+          class="flex justify-center subscribe font-bold text-white bg-[#1d9bf0] p-2.5 pr-4 pl-4 rounded-3xl w-28 mt-2"
+          style="font-size: 15px"
+          >Subscribe</a
+        >
+      </div>
+      <div
+        class="banner flex flex-col gap-2 banner mt-8 mr-8 ml-8 rounded-2xl border border-gray-100 pb-4"
+      >
+        <h4 class="font-bold text-xl p-4 pb-0">What's Happening</h4>
+        <div class="flex items-center justify-between tagslist p-4 pb-0">
+          <div class="left">
+            <div class="hashtag">
+              <div class="flex gap-2 top text-gray-500" style="font-size: 13px">
+                <p>Paragraph</p>
+                <p>Trending</p>
+              </div>
+              <div class="bottom">
+                <p class="bold font-bold">#hashtagtrend</p>
+              </div>
+            </div>
+          </div>
+          <div class="more text-3xl text-gray-500"><p>...</p></div>
+        </div>
+        <div class="flex items-center justify-between tagslist p-4 pb-0">
+          <div class="left">
+            <div class="hashtag">
+              <div class="flex gap-2 top text-gray-500" style="font-size: 13px">
+                <p>Paragraph</p>
+                <p>Trending</p>
+              </div>
+              <div class="bottom">
+                <p class="bold font-bold">#hashtagtrend</p>
+              </div>
+            </div>
+          </div>
+          <div class="more text-3xl text-gray-500"><p>...</p></div>
+        </div>
+        <div class="flex items-center justify-between tagslist p-4 pb-0">
+          <div class="left">
+            <div class="hashtag">
+              <div class="flex gap-2 top text-gray-500" style="font-size: 13px">
+                <p>Paragraph</p>
+                <p>Trending</p>
+              </div>
+              <div class="bottom">
+                <p class="bold font-bold">#hashtagtrend</p>
+              </div>
+            </div>
+          </div>
+          <div class="more text-3xl text-gray-500"><p>...</p></div>
+        </div>
+        <div class="flex items-center justify-between tagslist p-4 pb-0">
+          <div class="left">
+            <div class="hashtag">
+              <div class="flex gap-2 top text-gray-500" style="font-size: 13px">
+                <p>Paragraph</p>
+                <p>Trending</p>
+              </div>
+              <div class="bottom">
+                <p class="bold font-bold">#hashtagtrend</p>
+              </div>
+            </div>
+          </div>
+          <div class="more text-3xl text-gray-500"><p>...</p></div>
+        </div>
+      </div>
+      <div
+        class="banner flex flex-col gap-2 banner mt-8 mr-8 ml-8 rounded-2xl border border-gray-100 pb-4"
+      >
+        <h4 class="font-bold text-xl p-4 pb-0">Who to follow</h4>
+        <div class="flex items-center justify-between profile pr-4 pl-4 pt-4">
+          <div class="left flex gap-2">
+            <span class="material-symbols-outlined" style="font-size: 40px">
+              face_3
+            </span>
+            <div class="details">
+              <div class="flex items-center gap-2 verified">
+                <h4 class="font-bold" style="font-size: 15px">Account Name</h4>
+                <svg
+                  class="size-4"
+                  viewBox="0 0 22 22"
+                  aria-label="Verified account"
+                  role="img"
+                  class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i"
+                  data-testid="icon-verified"
+                >
+                  <g>
+                    <path
+                      d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="username text-gray-500" style="font-size: 15px">
+                <p>@username</p>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <a
+              href="#follow"
+              class="follow font-bold text-white bg-[#0f1419] p-2 pr-5 pl-5 rounded-3xl"
+              >Follow</a
+            >
+          </div>
+        </div>
+        <div class="flex items-center justify-between profile pr-4 pl-4 pt-4">
+          <div class="left flex gap-2">
+            <span class="material-symbols-outlined" style="font-size: 40px">
+              face_3
+            </span>
+            <div class="details">
+              <div class="flex items-center gap-2 verified">
+                <h4 class="font-bold" style="font-size: 15px">Account Name</h4>
+                <svg
+                  class="size-4"
+                  viewBox="0 0 22 22"
+                  aria-label="Verified account"
+                  role="img"
+                  class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i"
+                  data-testid="icon-verified"
+                >
+                  <g>
+                    <path
+                      d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="username text-gray-500" style="font-size: 15px">
+                <p>@username</p>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <a
+              href="#follow"
+              class="follow font-bold text-white bg-[#0f1419] p-2 pr-5 pl-5 rounded-3xl"
+              >Follow</a
+            >
+          </div>
+        </div>
+        <div class="flex items-center justify-between profile pr-4 pl-4 pt-4">
+          <div class="left flex gap-2">
+            <span class="material-symbols-outlined" style="font-size: 40px">
+              face_3
+            </span>
+            <div class="details">
+              <div class="flex items-center gap-2 verified">
+                <h4 class="font-bold" style="font-size: 15px">Account Name</h4>
+                <svg
+                  class="size-4"
+                  viewBox="0 0 22 22"
+                  aria-label="Verified account"
+                  role="img"
+                  class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i"
+                  data-testid="icon-verified"
+                >
+                  <g>
+                    <path
+                      d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="username text-gray-500" style="font-size: 15px">
+                <p>@username</p>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <a
+              href="#follow"
+              class="follow font-bold text-white bg-[#0f1419] p-2 pr-5 pl-5 rounded-3xl"
+              >Follow</a
+            >
+          </div>
+        </div>
+        <div class="flex items-center justify-between profile pr-4 pl-4 pt-4">
+          <div class="left flex gap-2">
+            <span class="material-symbols-outlined" style="font-size: 40px">
+              face_3
+            </span>
+            <div class="details">
+              <div class="flex items-center gap-2 verified">
+                <h4 class="font-bold" style="font-size: 15px">Account Name</h4>
+                <svg
+                  class="size-4"
+                  viewBox="0 0 22 22"
+                  aria-label="Verified account"
+                  role="img"
+                  class="r-4qtqp9 r-yyyyoo r-1xvli5t r-bnwqim r-lrvibr r-m6rgpd r-1cvl2hr r-f9ja8p r-og9te1 r-3t4u6i"
+                  data-testid="icon-verified"
+                >
+                  <g>
+                    <path
+                      d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="username text-gray-500" style="font-size: 15px">
+                <p>@username</p>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <a
+              href="#follow"
+              class="follow font-bold text-white bg-[#0f1419] p-2 pr-5 pl-5 rounded-3xl"
+              >Follow</a
+            >
+          </div>
+        </div>
+        <a href="#more" class="showmore p-4 pb-0 text-[#1d9bf0]">Show more</a>
+      </div>
+      <div
+        class="links flex flex-wrap gap-4 banner mt-8 mr-8 ml-8 rounded-2xl pb-4 text-gray-500"
+        style="font-size: 11px"
+      >
+        <p class="p-2">Terms</p>
+        <p class="p-2">Privacy</p>
+        <p class="p-2">Cookies</p>
+        <p class="p-2">Accessibility</p>
+        <p class="p-2">Ads Info</p>
+        <p class="p-2">More...</p>
+        <p class="p-2">© 2026 X Corp.</p>
+      </div>
+    </div>
+  </body>
+</html>
